@@ -1,0 +1,59 @@
+/************************************/
+/******** BLOG POST CSS START ******/
+/**********************************/
+
+.single-blog-post-image{
+    height: 271px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.single-blog-post-body{
+    background: var(--bs-white);
+    padding: 24px 24px 24px 24px;
+    margin-left: 40px;
+    border-radius: 14px;
+    z-index: 1;
+    position: relative;
+    top: -44px;
+    .meta{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 10px;
+        a{
+            text-decoration: none;
+            color: var(--bs-primary);
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+    }
+    .post-title{
+        color: var(--bs-post-title);
+        overflow: hidden;
+        background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-post-title) 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 700ms ease;
+
+        &:hover{
+            background-position: 0 100%;
+            
+        }
+    }
+    
+}
+
+/**********************************/
+/******** BLOG POST CSS END ******/
+/********************************/

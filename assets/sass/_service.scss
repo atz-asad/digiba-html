@@ -1,0 +1,92 @@
+/****************************/
+/******** service CSS ******/
+/**************************/
+
+.service-item{
+    background: var(--bs-white);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    .service-icon{
+        width: 94px;
+        height: 92px;
+        border-radius: 12px;
+        background: #EDFCFA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+            border-radius: 12px;
+        }
+    }
+    
+    .service-body{
+        padding: 38px 27px 26px 27px;
+    }
+    .service-title{
+        a{
+            text-decoration: none;
+            color: currentColor;
+        }
+    }
+    .service-desc{
+        color: var(--bs-body-color);
+        font-family: var(--bs-body-font-family);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.429;
+    }
+    &:hover{
+        box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+    }
+}
+
+/**===========================
+===== service-item style 2
+==============================
+*/
+.service-item-style-2{
+    background: var(--bs-white);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    padding: 34px 30px 24px 30px;
+    .service-icon{
+        width: 94px;
+        height: 92px;
+        border-radius: 12px;
+        background: #EDFCFA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+            border-radius: 12px;
+        }
+    }
+    .service-body{
+        padding: 26px 0px 0px 0px;
+    }
+    .service-icon.account{
+        background: #F8F2FE;
+    }
+    .service-icon.transfer{
+        background: #FFF6F2;
+    }
+    .service-icon.money-request{
+        background: #FFF2F6;
+    }
+    .service-title{
+        margin-bottom: 14px;
+    }
+    .service-desc{
+        color: var(--bs-body-color);
+        font-family: var(--bs-body-font-family);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.429;
+        margin-bottom: 18px;
+    }
+    &:hover{
+        box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+    }
+}

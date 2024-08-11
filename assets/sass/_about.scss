@@ -1,0 +1,73 @@
+/****************************/
+/******** About CSS ********/
+/**************************/
+
+.about-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    
+}
+
+.about-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .icon{
+        width: 65px;
+        height: 65px;
+        border-radius: 8px;
+        background: var(--bs-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.section-achievement{
+    background: url(../images/about/acrivment.png) no-repeat scroll center center / cover;
+
+    .achievement-item-wrapper{
+        display: flex;
+        gap: 124px;
+        .achievement-item{
+            padding: 6px 30px 20px 42px;
+            position: relative;
+            z-index: 1;
+            &::after{
+                position: absolute;
+                content: "";
+                right: -102px;
+                top: 50%;
+                background: url(../images/service/vactor-arrow.png) no-repeat scroll center center;
+                background-size: contain;
+                width: 82px;
+                height: 15px;
+                transform: translateY(-50%);
+            }
+            &:last-child::after {
+                display: none;
+            }
+            .achievement-icon {
+                height: 46px;
+                width: 46px;
+                img{
+                    border-radius: 6px;
+                }
+            }
+            .achievement-body{
+                padding-top: 30px;
+            }
+            svg{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+  /****************************/
+ /******** global CSS ********/
+/****************************/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// font-family: "Inter", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+// font-family: "Manrope", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+// font-family: "Outfit", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+// font-family: "Jost", sans-serif;
+
+:root{
+    --bs-primary: #197BFF;
+    --bs-primary-rgb: 25, 123, 255;
+    --bs-body-bg: #F3F4F6;
+    --bs-body-bg-rgb: 243, 244, 246;
+    --bs-body-color: #686868;
+    --bs-heading-color: #080C15;
+    --bs-heading-color-rgb: 8, 12, 21;
+
+    --bs-border: #DFDFDF;
+    --bs-accordion-btn-color: #171725;
+    --bs-post-title: #181B1D;
+
+    --font-family-inter: "Inter", sans-serif;
+    --font-family-heading: "Outfit", sans-serif;
+    --bs-body-font-family: "Manrope", sans-serif;
+    --font-family-josh: "Jost", sans-serif;
+
+}
+
+
+
+[data-bs-theme="dark"]{
+    --#{$prefix}body-bg: #0d171e;
+    --#{$prefix}body-bg-rgb: 13, 23, 30;
+    --bs-heading-color: #ffffff;
+    --bs-body-color: #ffffff;
+}
+
+.body-font-family{
+    font-family: var(--bs-body-font-family);
+}
+.font-family-inter{
+    font-family: var(--font-family-inter);
+}
+.extra-small{
+    font-size: 12px;
+}
+
+.reset-ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Magic cursor css start */
+
+.magic-cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    pointer-events: none; /* So the cursor doesn't interfere with other elements */
+    transition: transform 0.15s ease, background-color 0.15s ease, width 0.15s ease, height 0.15s ease;
+    z-index: 9999; /* Ensure it is on top of other elements */
+    transform: translate(-50%, -50%); /* Center the cursor */
+}
+
+.magic-cursor::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--bs-primary);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 0.15s ease, height 0.15s ease, background 0.15s ease;
+    /* background: rgba(var(--bs-primary-rgb), 0.2);  */
+}
+.magic-cursor.hovered{
+    background: transparent;
+}
+.magic-cursor.hovered::after {
+    width: 50px; /* Size when hovering over the button */
+    height: 50px; /* Size when hovering over the button */
+    border: 1px solid var(--bs-primary);
+    background: rgba(var(--bs-primary-rgb), 0.5); /* Ensure partial transparency */
+}
+
+/* Magic cursor css End */
+
+

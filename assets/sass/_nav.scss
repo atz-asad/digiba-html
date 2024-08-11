@@ -1,0 +1,33 @@
+  /**************************/
+ /******** nav CSS *********/
+/**************************/
+
+.nav-tabs {
+  border-bottom: 0;
+  width: max-content;
+  border-radius: 81px;
+  background: #F9F8FF;
+  padding: 8px 28px;
+  .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    isolation: isolate;
+    border-color: none;
+  }
+  .nav-link{
+    padding: 12px 24px;
+    font-family: var(--font-family-inter);
+    color: var(--bs-primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.429; /* 142.857% */
+    border-radius: 41px;
+  }
+
+  .nav-link.active,
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+  }
+}
+

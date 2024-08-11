@@ -1,0 +1,211 @@
+$prefix: bs-;
+$white: #fff;
+
+$font-family-sans-serif: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    // custom
+    10: $spacer * 0.625,
+    14: $spacer * 0.875,
+    18: $spacer * 1.125,
+    20: $spacer * 1.25,
+    24: $spacer * 1.5,
+    30: $spacer * 1.875,
+    40: $spacer * 2.5,
+    50: $spacer * 3.125,
+    60: $spacer * 3.75,
+    65: $spacer * 4.0625,
+    70: $spacer * 4.375,
+    80: $spacer * 5,
+    90: $spacer * 5.625,
+    100: $spacer * 6.25,
+    120: $spacer * 7.5,
+);
+// end spacers
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1350px
+);
+
+// $grid-gutter-width:   30px;
+
+$headings-font-weight :700;
+
+$headings-line-height: 1.17242;
+
+// ==============Font Sizes
+
+$font-size-base: 1rem; //16px
+$h1-font-size:  $font-size-base*3.625; //58px
+$h2-font-size:  $font-size-base*2.75; //44px
+$h3-font-size:  $font-size-base*2; //32px
+$h4-font-size:  $font-size-base*1.375; //22px
+$h5-font-size:  $font-size-base*1.125; //18px
+$h6-font-size:  $font-size-base; //16px
+
+
+$lead-font-size:              $font-size-base * 1.125 !default;
+$lead-font-weight:         400;
+
+// font family
+$headings-font-family: var(--font-family-heading);
+$zindex-levels: (
+    n1: -1,
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    5: 5
+  );
+
+$enable-negative-margins: true;
+$enable-important-utilities: false;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+$btn-padding-y:               14px;
+$btn-padding-x:              20px;
+$btn-font-weight:             700;
+$btn-border-width:           2px;
+$btn-line-height:            1;
+$btn-font-size:               18px;
+
+$btn-border-radius:           0;
+$btn-border-radius-sm:        0;
+$btn-border-radius-lg:        0;
+
+// large button
+$btn-padding-y-lg:            20px;
+$btn-padding-x-lg:            30px;
+$btn-font-size-lg:            20px;
+
+//  small button
+$btn-padding-y-sm:            3px;
+$btn-padding-x-sm:            12px;
+$btn-font-size-sm:            14px;
+$btn-border-width-sm:           1px;
+
+// Forms
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: 1rem;
+$input-border-width:                   2px;
+$input-box-shadow:                      var(--#{$prefix}input-box-shadow-inset, none);
+$input-border-radius:                   var(--#{$prefix}input-border-radius, 0);
+$input-border-radius-sm:                var(--#{$prefix}input-border-radius-sm, 0);
+$input-border-radius-lg:                var(--#{$prefix}input-border-radius-lg, 0);
+$input-focus-box-shadow:                var(--#{$prefix}input-focus-box-shadow, none);
+$input-focus-border-color:              var(--#{$prefix}primary);
+
+$form-select-focus-box-shadow:    none;
+$form-select-border-radius-sm:    0;
+$form-select-border-radius-lg:    0;
+$form-select-border-radius:       0;
+$form-check-input-focus-box-shadow:       none;
+$form-check-input-focus-border:           var(--#{$prefix}primary);
+
+// breadcrumb
+$breadcrumb-font-size:              18px;
+$breadcrumb-item-padding-x:         0;
+
+
+// Navs
+
+// scss-docs-start nav-variables
+$nav-link-padding-y:               20px;
+$nav-link-font-size:               18px;
+$nav-link-font-weight:              500;
+
+// Navbar
+$navbar-padding-y:                  0;
+$navbar-nav-link-padding-x:         0;
+$navbar-dark-color:                 rgba($white, .75);
+$navbar-dark-hover-color:           $white;
+$nav-link-height:                   1;
+
+$nav-link-font-size:                null !default;
+$nav-link-font-weight:              600 ;
+$nav-link-color:                    var(--#{$prefix}heading-color);
+$nav-link-hover-color:              var(--#{$prefix}primary);
+
+// Dropdowns
+$dropdown-spacer:                   0;
+$dropdown-padding-y:                0;
+$dropdown-border-width:             0;
+$dropdown-border-radius:            var(--#{$prefix}dropdown-border-radius, 0);
+$dropdown-font-size:                $nav-link-font-size;
+$dropdown-box-shadow:               -2px 0px  2px rgba(0,0,0,0.25),2px 0  2px rgba(0,0,0,0.25);
+$dropdown-bg:                       var(--#{$prefix}white);
+$dropdown-item-padding-y:           10px;
+$dropdown-item-padding-x:           30px;
+$dropdown-link-active-color:        var(--#{$prefix}white);
+$dropdown-link-hover-color:         var(--#{$prefix}white) !default;
+$dropdown-link-active-bg:            var(--#{$prefix}primary);
+$dropdown-link-hover-bg:            var(--#{$prefix}primary) !default;
+$dropdown-link-color:               var(--#{$prefix}heading-color) !default;
+$dropdown-font-size:                1rem;
+$dropdown-font-weight:               700;
+
+
+$dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-bg:           $component-active-bg !default;
+
+// Cards
+$card-border-width:                 var(--#{$prefix}card-border-width, 0);
+$card-border-radius:                var(--#{$prefix}card-border-radius, 0);
+$card-title-color:                  var(--#{$prefix}heading-color);
+
+// nav tab
+$nav-tabs-border-color:             null !default;
+$nav-tabs-border-width:             0 !default;
+$nav-tabs-border-radius:            0 !default;
+$nav-tabs-link-hover-border-color:  0 !default;
+$nav-tabs-link-active-color:        var(--#{$prefix}white) !default;
+$nav-tabs-link-active-bg:           var(--#{$prefix}primary) !default;
+$nav-tabs-link-active-border-color: 0;
+
+
+// scss-docs-start accordion-variables
+$accordion-padding-y:                     1rem !default;
+$accordion-padding-x:                     1.25rem !default;
+$accordion-color:                         var(--#{$prefix}body-color) !default;
+$accordion-bg:                            var(--#{$prefix}body-bg) !default;
+$accordion-border-width:                  0 !default;
+$accordion-border-color:                  null !default;
+// $accordion-border-radius:                 0 !default;
+// $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
+
+$accordion-body-padding-y:                $accordion-padding-y !default;
+$accordion-body-padding-x:                $accordion-padding-x !default;
+
+$accordion-button-padding-y:              $accordion-padding-y !default;
+$accordion-button-padding-x:              $accordion-padding-x !default;
+$accordion-button-color:                  var(--#{$prefix}accordion-btn-color) !default;
+$accordion-button-bg:                     var(--#{$prefix}white) !default;
+
+$accordion-button-active-bg:              var(--#{$prefix}white) !default;
+$accordion-button-active-color:           var(--#{$prefix}accordion-btn-color) !default;

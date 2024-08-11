@@ -1,0 +1,63 @@
+/**************************/
+/******** Footer CSS ******/
+/**************************/
+
+.footer-widget-item a{
+    text-decoration: none;
+    color: currentColor;
+    display: inline-block;
+}
+.footer-widget-item a:hover{
+    color: var(--bs-primary);
+}
+
+.subscribe-group-btn {
+    display: flex;
+    background: var(--bs-white);
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.subscribe-group-btn input {
+    color: var(--bs-body-color);
+    font-family: var(--bs-body-font-family);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    padding: 16px 14px 16px 14px;
+    border-radius: 10px;
+    width: 100%;
+    border: 0;
+}
+.subscribe-group-btn input:focus-visible{
+    border: 0;
+    outline: 0;
+}
+.footer-subscribe-widget .subscribe-btn {
+    border-radius: 10px;
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    font-family: var(--font-family-josh);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    padding: 0 15px;
+    outline: 0;
+    border: 0;
+}
+.footer-subscribe-widget .subscribe-btn:hover{
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+
+/*============================
+     footer-copyright
+==============================*/
+
+.footer-copyright{
+    border-top: 2px solid var(--bs-border-color);
+}
+
+

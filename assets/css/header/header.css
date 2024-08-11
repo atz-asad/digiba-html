@@ -1,0 +1,80 @@
+/**************************/
+/******** header CSS ******/
+/**************************/
+/* .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 38px;
+}
+
+.menu-nav .menu-item .nav-link {
+    color: #080C15;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.menu-nav .menu-item .nav-link:hover{
+    color: var(--bs-primary);
+}
+.menu-nav .menu-item .dropdown {
+    color: var(--bs-primary);
+}
+
+.menu-nav .menu-item .dropdown-toggle::after {
+    border: 0;
+    content: "+";
+    position: absolute;
+    font-size: 20px;
+    line-height: 1;
+    top: 2px;
+}
+.menu-item .dropdown-menu .dropdown-item{
+    color: var(--bs-heading-color);
+    font-weight: 600;
+}
+.menu-item .dropdown-menu .dropdown-item:hover{
+    color: var(--bs-white);
+} */
+
+/* ============================
+======   header-Buttons  ======
+===============================
+*/
+
+.header-Buttons{
+    display: flex;
+    gap: 18px;
+}
+.header-btn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--bs-heading-color);
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    text-decoration: none;
+}
+.header-Buttons .header-btn .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

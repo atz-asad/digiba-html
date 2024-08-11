@@ -1,0 +1,111 @@
+  /***********************************/
+ /******** pricing-plan css *********/
+/***********************************/
+
+
+.pricing-plan-item{
+  background: var(--bs-white);
+  border-radius: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .pricing-plan-header{
+    padding: 40px 24px 20px 24px;
+    .description{
+      padding-right: 100px;
+    }
+    .icon{
+      height: 82px;
+      width: 82px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  .rateing-title{
+    background: #ECF8FE;
+    padding: 20px 23px;
+  }
+  .pricing-plan-list{
+    list-style: none;
+    margin: 0;
+    padding: 50px 24px 33px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      i{
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 26px;
+        color: var(--bs-white);
+        background: var(--bs-primary);
+      }
+    }
+  }
+  .pricing-plan-footer{
+    padding: 0 24px 0px 24px;
+    margin-top: auto;
+  }
+}
+.pricing-plan-item.active{
+  background: var(--bs-primary);
+  .pricing-plan-header{
+    color: var(--bs-white);
+    .title{
+      color: var(--bs-white);
+    }
+  }
+  .pricing-plan-list{
+    li{
+      color: var(--bs-white);
+      .list-title{
+        color: var(--bs-white);
+      }
+      i{
+        color: var(--bs-primary);
+        background: var(--bs-white);
+      }
+    }
+  }
+  .btn.btn-primary{
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    &:hover{
+      color: var(--bs-white);
+      background: transparent;
+      border: 2px solid var(--bs-white);
+    }
+  }
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+}

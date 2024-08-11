@@ -1,0 +1,129 @@
+  /***********************************/
+ /******** TESTIMONIAL CSS *********/
+/***********************************/
+
+
+// testimonial-slide-item
+.testimonial-slide-item{
+  background: var(--bs-white);
+  border-radius: 20px;
+  .testimonial-slide-header{
+    border-bottom: 2px dashed#EAEAEA;
+    padding: 0 30px 20px 30px;
+  }
+  .testimonial-author-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .image{
+      width: 48px;
+      height: 68px;
+      border-radius: 0px 0px 24px 24px;
+      overflow: hidden;
+    }
+    a{
+      color: currentColor;
+      text-decoration: none;
+    }
+    .designation{
+      color: #686868;
+    }
+  }
+  .testimonial-content{
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    .quote-icon{
+      position: absolute;
+      left: 35px;
+      top: 22px;
+      z-index: -1;
+    }
+  }
+  .rating-icons{
+    color: #FDC040;
+  }
+}
+
+// testimonial-pagination
+.testimonial-pagination{
+  position: relative;
+  bottom: 0 !important;
+  left: 100% !important;
+  .swiper-pagination-bullet{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background: var(--bs-primary);
+  }
+}
+
+
+
+// testimonial-paralax
+.testimonial-paralax{
+  background: url(../images/testimonial/pararax-bg.png) no-repeat scroll center center / cover;
+  height: 481px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+
+  img{
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .paralax-img {
+    position: absolute;
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+  }
+  .paralax-img:nth-child(1){
+    right: 80px;
+    bottom: 70px;
+    width: 243px;
+    height: 243px;
+    
+  }
+  .paralax-img:nth-child(2){
+    right: 0;
+    top: 40px;
+    width: 75px;
+    height: 75px;
+  }
+  .paralax-img:nth-child(3){
+    right: 25px;
+    top: 180px;
+    width: 52px;
+    height: 52px;
+  }
+  .paralax-img:nth-child(4){
+    right: 0;
+    bottom: 66px;
+    width: 72px;
+    height: 72px;
+  }
+  .paralax-img:nth-child(5){
+    right: 270px;
+    bottom: 0;
+    width: 67px;
+    height: 67px;
+  }
+  .paralax-img:nth-child(6){
+    right: 400px;
+    bottom: 108px;
+    width: 60px;
+    height: 60px;
+  }
+  .paralax-img:nth-child(7){
+    right: 310px;
+    top: 90px;
+    width: 121px;
+    height: 121px;
+  }
+}
