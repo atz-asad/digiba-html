@@ -90,9 +90,21 @@
     // menu-toggler
     document.addEventListener('DOMContentLoaded', function() {
         var menuIcon = document.querySelector('.menu-toggler');
-        
+        var offcanvas = document.getElementById('mobilemenu-offcanvas');
+
+        // Add event listener for when the offcanvas is shown
+        offcanvas.addEventListener('shown.bs.offcanvas', function() {
+            menuIcon.classList.add('active');
+        });
+
+        // Add event listener for when the offcanvas is hidden
+        offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+            menuIcon.classList.remove('active');
+        });
+
+        // Optionally, you can keep the original toggle functionality on menuIcon click
         menuIcon.addEventListener('click', function() {
-          this.classList.toggle('active');
+            this.classList.toggle('active');
         });
     });
 
