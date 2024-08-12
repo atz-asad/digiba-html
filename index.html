@@ -34,20 +34,22 @@
     <!-- pages -->
     <div class="pages">
 
-        <div class="magic-cursor d-none"></div>
+        <div class="magic-cursor"></div>
 
         <!--========= Start Header ==========-->
-        <header class="header-section">
-            <nav class="navbar navbar-expand-lg hover-menu border-bottom bg-dark py-10 py-lg-0">
+        <header class="header-section to-be-fixed">
+            <nav class="navbar navbar-expand-lg hover-menu border-bottom bg-body py-10 py-lg-0">
                 <div class="container">
                     <!-- Logo -->
+                    
                     <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
                     <button class="menu-toggler d-block d-lg-none active" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu-offcanvas" aria-controls="mobilemenu-offcanvas">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="main_nav">
+                   
+                    <div class="collapse navbar-collapse d-lg-block d-none" id="main_nav">
                         <!-- Header menu -->
                         <ul class="navbar-nav justify-content-center ms-auto gap-xl-40 gap-30">
                             <li class="nav-item dropdown ">
@@ -122,24 +124,21 @@
                         </ul>
                         <!-- Header Buttons -->
                         <div class="header-Buttons ms-auto">
-                            <a href="#" class="header-btn">
-                                <span class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z" fill="#080C15"/>
-                                        <path d="M8.99999 21.75H7.99999C7.58999 21.75 7.24999 21.41 7.24999 21C7.24999 20.59 7.56999 20.26 7.97999 20.25C6.40999 14.89 6.40999 9.11 7.97999 3.75C7.56999 3.74 7.24999 3.41 7.24999 3C7.24999 2.59 7.58999 2.25 7.99999 2.25H8.99999C9.23999 2.25 9.46999 2.37 9.60999 2.56C9.74999 2.76 9.78999 3.01 9.70999 3.24C7.82999 8.89 7.82999 15.11 9.70999 20.77C9.78999 21 9.74999 21.25 9.60999 21.45C9.46999 21.63 9.23999 21.75 8.99999 21.75Z" fill="#080C15"/>
-                                        <path d="M15.0004 21.75C14.9204 21.75 14.8404 21.74 14.7604 21.71C14.3704 21.58 14.1504 21.15 14.2904 20.76C16.1704 15.11 16.1704 8.89 14.2904 3.23C14.1604 2.84 14.3704 2.41 14.7604 2.28C15.1604 2.15 15.5804 2.36 15.7104 2.75C17.7004 8.71 17.7004 15.27 15.7104 21.22C15.6104 21.55 15.3104 21.75 15.0004 21.75Z" fill="#080C15"/>
-                                        <path d="M12 17.2C9.21 17.2 6.43 16.81 3.75 16.02C3.74 16.42 3.41 16.75 3 16.75C2.59 16.75 2.25 16.41 2.25 16V15C2.25 14.76 2.37 14.53 2.56 14.39C2.76 14.25 3.01 14.21 3.24 14.29C8.89 16.17 15.12 16.17 20.77 14.29C21 14.21 21.25 14.25 21.45 14.39C21.65 14.53 21.76 14.76 21.76 15V16C21.76 16.41 21.42 16.75 21.01 16.75C20.6 16.75 20.27 16.43 20.26 16.02C17.57 16.81 14.79 17.2 12 17.2Z" fill="#080C15"/>
-                                        <path d="M21 9.75C20.92 9.75 20.84 9.74 20.76 9.71C15.11 7.83 8.88003 7.83 3.23003 9.71C2.83003 9.84 2.41003 9.63 2.28003 9.24C2.16003 8.84 2.37003 8.42 2.76003 8.29C8.72003 6.3 15.28 6.3 21.23 8.29C21.62 8.42 21.84 8.85 21.7 9.24C21.61 9.55 21.31 9.75 21 9.75Z" fill="#080C15"/>
-                                    </svg>
-                                </span>
-                                English <i class="fa-solid fa-plus"></i>
-                            </a>
+                            <div href="#" class="header-btn">
+                                <form>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa-regular fa-globe"></i>
+                                        <select class="form-select language-select" aria-label="Default select example">
+                                            <option selected>English</option>
+                                            <option value="bangla">Bangla</option>
+                                            <option value="Arabic">Arabic</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
                             <a href="#" class="header-btn">
                                 <span class="icon bg-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M10.133 9.68333C10.108 9.68333 10.0913 9.68333 10.0663 9.68333C10.0247 9.675 9.96635 9.675 9.91635 9.68333C7.49968 9.60833 5.67468 7.70833 5.67468 5.36667C5.67468 2.98333 7.61635 1.04167 9.99968 1.04167C12.383 1.04167 14.3247 2.98333 14.3247 5.36667C14.3164 7.70833 12.483 9.60833 10.158 9.68333C10.1497 9.68333 10.1413 9.68333 10.133 9.68333ZM9.99968 2.29167C8.30802 2.29167 6.92468 3.675 6.92468 5.36667C6.92468 7.03333 8.22468 8.375 9.88302 8.43333C9.92468 8.425 10.0413 8.425 10.1497 8.43333C11.783 8.35833 13.0663 7.01667 13.0747 5.36667C13.0747 3.675 11.6913 2.29167 9.99968 2.29167Z" fill="currentcolor"/>
-                                        <path d="M10.1413 18.7917C8.50801 18.7917 6.86634 18.375 5.62467 17.5417C4.46634 16.775 3.83301 15.725 3.83301 14.5833C3.83301 13.4417 4.46634 12.3833 5.62467 11.6083C8.12467 9.95 12.1747 9.95 14.658 11.6083C15.808 12.375 16.4497 13.425 16.4497 14.5667C16.4497 15.7083 15.8163 16.7667 14.658 17.5417C13.408 18.375 11.7747 18.7917 10.1413 18.7917ZM6.31634 12.6583C5.51634 13.1917 5.08301 13.875 5.08301 14.5917C5.08301 15.3 5.52467 15.9833 6.31634 16.5083C8.39134 17.9 11.8913 17.9 13.9663 16.5083C14.7663 15.975 15.1997 15.2917 15.1997 14.575C15.1997 13.8667 14.758 13.1833 13.9663 12.6583C11.8913 11.275 8.39134 11.275 6.31634 12.6583Z" fill="currentcolor"/>
-                                    </svg>
+                                    <i class="fa-light fa-user"></i>
                                 </span>
                                 Login
                             </a>
@@ -152,8 +151,8 @@
         <!-- Mobile-menu -->
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="mobilemenu-offcanvas">
             <div class="offcanvas-header justify-content-between px-20">
-                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-                <a class="menu-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-light fa-xmark"></i></a>
+                <a class="navbar-brand mx-auto pt-20" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                <!-- <a class="menu-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-light fa-xmark"></i></a> -->
             </div>
             <div class="offcanvas-body">
                 <nav class="main_nenu">
@@ -214,75 +213,75 @@
                     </ul>
                 </nav>
                 <div class="header-Buttons justify-content-center pt-40 pb-40">
-                    <a href="#" class="header-btn">
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z" fill="#080C15"/>
-                                <path d="M8.99999 21.75H7.99999C7.58999 21.75 7.24999 21.41 7.24999 21C7.24999 20.59 7.56999 20.26 7.97999 20.25C6.40999 14.89 6.40999 9.11 7.97999 3.75C7.56999 3.74 7.24999 3.41 7.24999 3C7.24999 2.59 7.58999 2.25 7.99999 2.25H8.99999C9.23999 2.25 9.46999 2.37 9.60999 2.56C9.74999 2.76 9.78999 3.01 9.70999 3.24C7.82999 8.89 7.82999 15.11 9.70999 20.77C9.78999 21 9.74999 21.25 9.60999 21.45C9.46999 21.63 9.23999 21.75 8.99999 21.75Z" fill="#080C15"/>
-                                <path d="M15.0004 21.75C14.9204 21.75 14.8404 21.74 14.7604 21.71C14.3704 21.58 14.1504 21.15 14.2904 20.76C16.1704 15.11 16.1704 8.89 14.2904 3.23C14.1604 2.84 14.3704 2.41 14.7604 2.28C15.1604 2.15 15.5804 2.36 15.7104 2.75C17.7004 8.71 17.7004 15.27 15.7104 21.22C15.6104 21.55 15.3104 21.75 15.0004 21.75Z" fill="#080C15"/>
-                                <path d="M12 17.2C9.21 17.2 6.43 16.81 3.75 16.02C3.74 16.42 3.41 16.75 3 16.75C2.59 16.75 2.25 16.41 2.25 16V15C2.25 14.76 2.37 14.53 2.56 14.39C2.76 14.25 3.01 14.21 3.24 14.29C8.89 16.17 15.12 16.17 20.77 14.29C21 14.21 21.25 14.25 21.45 14.39C21.65 14.53 21.76 14.76 21.76 15V16C21.76 16.41 21.42 16.75 21.01 16.75C20.6 16.75 20.27 16.43 20.26 16.02C17.57 16.81 14.79 17.2 12 17.2Z" fill="#080C15"/>
-                                <path d="M21 9.75C20.92 9.75 20.84 9.74 20.76 9.71C15.11 7.83 8.88003 7.83 3.23003 9.71C2.83003 9.84 2.41003 9.63 2.28003 9.24C2.16003 8.84 2.37003 8.42 2.76003 8.29C8.72003 6.3 15.28 6.3 21.23 8.29C21.62 8.42 21.84 8.85 21.7 9.24C21.61 9.55 21.31 9.75 21 9.75Z" fill="#080C15"/>
-                            </svg>
-                        </span>
-                        English <i class="fa-solid fa-plus"></i>
-                    </a>
+                    <div href="#" class="header-btn">
+                        <form>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-globe"></i>
+                                <select class="form-select language-select" aria-label="Default select example">
+                                    <option selected>English</option>
+                                    <option value="bangla">Bangla</option>
+                                    <option value="Arabic">Arabic</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
                     <a href="#" class="header-btn">
                         <span class="icon bg-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M10.133 9.68333C10.108 9.68333 10.0913 9.68333 10.0663 9.68333C10.0247 9.675 9.96635 9.675 9.91635 9.68333C7.49968 9.60833 5.67468 7.70833 5.67468 5.36667C5.67468 2.98333 7.61635 1.04167 9.99968 1.04167C12.383 1.04167 14.3247 2.98333 14.3247 5.36667C14.3164 7.70833 12.483 9.60833 10.158 9.68333C10.1497 9.68333 10.1413 9.68333 10.133 9.68333ZM9.99968 2.29167C8.30802 2.29167 6.92468 3.675 6.92468 5.36667C6.92468 7.03333 8.22468 8.375 9.88302 8.43333C9.92468 8.425 10.0413 8.425 10.1497 8.43333C11.783 8.35833 13.0663 7.01667 13.0747 5.36667C13.0747 3.675 11.6913 2.29167 9.99968 2.29167Z" fill="currentcolor"/>
-                                <path d="M10.1413 18.7917C8.50801 18.7917 6.86634 18.375 5.62467 17.5417C4.46634 16.775 3.83301 15.725 3.83301 14.5833C3.83301 13.4417 4.46634 12.3833 5.62467 11.6083C8.12467 9.95 12.1747 9.95 14.658 11.6083C15.808 12.375 16.4497 13.425 16.4497 14.5667C16.4497 15.7083 15.8163 16.7667 14.658 17.5417C13.408 18.375 11.7747 18.7917 10.1413 18.7917ZM6.31634 12.6583C5.51634 13.1917 5.08301 13.875 5.08301 14.5917C5.08301 15.3 5.52467 15.9833 6.31634 16.5083C8.39134 17.9 11.8913 17.9 13.9663 16.5083C14.7663 15.975 15.1997 15.2917 15.1997 14.575C15.1997 13.8667 14.758 13.1833 13.9663 12.6583C11.8913 11.275 8.39134 11.275 6.31634 12.6583Z" fill="currentcolor"/>
-                            </svg>
+                            <i class="fa-light fa-user"></i>
                         </span>
                         Login
                     </a>
                 </div>
-            </div>
-            
+            </div>        
         </div>
 
         <!-- ======= START HERO ========= -->
-        <section class="section-hero pt-80">
+        <section class="section-hero pt-60">
             <div class="container">
-                <div class="hero-wrapper d-flex gap-50 gap-lg-100 flex-lg-row flex-column align-items-center">
-                    <div class="content">
-                        <h1 class="mb-30 title-anim">Professional Finance Service Waiting <br> For Your Business</h1>
-                        <p class="mb-lg-50 mb-30">Explore on the world's best and largest Finance Banking System with your access to your bank account.</p>
-    
-                        <div class="d-flex flex-column flex-lg-row gap-3">
-                            <div>
-                                <a href="#" class="hover-target btn btn-primary border-radius-43">Create Free Account</a>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="content mb-20">
+                            <h1 class="mb-lg-30 mb-20 hero-title rv-text-anime">Professional Finance Service Waiting <br class="d-none d-xl-block"> For Your Business</h1>
+                            <p class="mb-lg-50 mb-30 hero-description text-anim">Explore on the world's best and largest Finance Banking System with your access to your bank account.</p>
+                            <div class="d-flex flex-column flex-lg-row gap-3">
+                                <div>
+                                    <a href="#" class="hover-target btn btn-primary border-radius-43">Create Free Account</a>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=ti6Ochpgxak" class="hover-target play-btn popup-video"><i class="fa-solid fa-play"></i><span>How It Works</span></a>
+                               
                             </div>
-                            <a href="https://www.youtube.com/watch?v=ti6Ochpgxak" class="hover-target play-btn popup-video"><i class="fa-solid fa-play"></i><span>How It Works</span></a>
-                           
                         </div>
                     </div>
-                    <div class="image-wrapper">
-                        <img src="assets/images/hero.png" alt="hero-image">
+                    <div class="col-lg-6">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/images/hero.png" alt="hero-image">
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </section>
         <!-- ========= END HERO ========= -->
 
         <!-- ========= START SERVICE ========= -->
-        <section class="section-service  pt-120 pb-100">
+        <section class="section-service pt-40 pt-lg-100 pb-lg-100 pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="mb-40 title-anim">Why You Chose Us</h3>
+                        <h3 class="mb-40 rv-text-anime">Why You Chose Us</h3>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item mb-20">
                             <div class="service-icon">
                                 <img class="img-fluid" src="assets/images/service/service-1.png" alt="service">
                             </div>
                             <div class="service-body">
                                 <h4 class="service-title"> <a href="#">24/7 Hours Online Payment Facility </a></h4>
-                                <p class="service-desc">Explore on the world's best and your largest Bidding market for payment scientie, musicalamren.</p>
+                                <p class="service-desc ">Explore on the world's best and your largest Bidding market for payment scientie, musicalamren.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item mb-20">
                             <div class="service-icon">
                                 <img class="img-fluid" src="assets/images/service/service-2.png" alt="service">
@@ -293,7 +292,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item mb-20">
                             <div class="service-icon">
                                 <img class="img-fluid" src="assets/images/service/service-3.png" alt="service">
@@ -304,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item mb-20">
                             <div class="service-icon">
                                 <img class="img-fluid" src="assets/images/service/service-4.png" alt="service">
@@ -321,7 +320,7 @@
         <!-- ========= END SERVICE ========= -->
 
         <!-- ========= START ABOUT SECTION ========= -->
-        <section class="about-service pt-100 pb-100">
+        <section class="about-service pb-lg-100 pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
@@ -331,8 +330,8 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="about-content ps-lg-50">
-                            <h2 class="mb-30 title-anim">Your Trusted Financial Partner for Business</h2>
-                            <p class="mb-20 mb-lg-40">Users interested in investing in real estate can register on the platform by providing their financial Users interested in investing in real estate can register on the platform by providing their own bank account</p>
+                            <h2 class="mb-30 rv-text-anime body-font-family">Your Trusted Financial Partner for Business</h2>
+                            <p class="mb-20 mb-lg-40 text-anim">Users interested in investing in real estate can register on the platform by providing their financial Users interested in investing in real estate can register on the platform by providing their own bank account</p>
     
                             <div class="about-item mb-24">
                                 <div class="icon">
@@ -361,15 +360,15 @@
         <!-- ========= END ABOUT SECTION  ======== -->
 
         <!-- ========= START SERVICE STYLE 2  ========= -->
-        <section class="section-service  pb-100">
+        <section class="section-service pb-lg-100 pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="mb-40 text-center title-anim">Which Services We Provide</h2>
+                        <h2 class="mb-40 text-center rv-text-anime">Which Services We Provide</h2>
                     </div>
                 </div>
-                <div class="row g-24">
-                    <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-5.png" alt="service">
@@ -381,7 +380,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-6.png" alt="service">
@@ -393,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-7.png" alt="service">
@@ -405,7 +404,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-8.png" alt="service">
@@ -417,7 +416,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-9.png" alt="service">
@@ -429,7 +428,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-10.png" alt="service">
@@ -441,7 +440,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-11.png" alt="service">
@@ -453,7 +452,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6">
                         <div class="service-item-style-2 service-item text-center mb-20">
                             <div class="service-icon mx-auto">
                                 <img class="img-fluid" src="assets/images/service/service-12.png" alt="service">
@@ -466,20 +465,18 @@
                         </div>
                     </div>
                 </div>
-                    
-                
             </div>
         </section>
         <!-- ========= END SERVICE STYLE 2  ========= -->
 
         <!-- ========= START Achievements ========= -->
-        <section class="section-achievement pt-65 pb-65 d-none">
+        <section class="section-achievement pt-65 pb-65">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="text-center">
-                            <h2 class="mb-14 title-anim">Our Overall Achievements</h2>
-                            <P class="px-lg-120 px-md-60 fs-5 mb-40">Users interested in investing in real estate can register on the platform by providing their</P>
+                            <h2 class="mb-14 rv-text-anime">Our Overall Achievements</h2>
+                            <P class="px-lg-120 px-md-60 fs-5 mb-40 text-anim">Users interested in investing in real estate can register on the platform by providing their</P>
                         </div>
                     </div>
                     <div class="col-12">
@@ -552,13 +549,13 @@
         <!-- ========= END Achievements ========= -->
 
         <!-- ========= START PRICING PLAN ========= -->
-        <section class="section-pricing pt-65 pb-65">
+        <section class="section-pricing pt-lg-120 pt-40 pb-lg-100 pb-40">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6">
-                        <div class="text-center">
-                            <h2 class="mb-14 title-anim">Great Transparent Plan</h2>
-                            <P class="px-40 fs-5 mb-40">Users interested in investing in real estate can register on the platform by providing their own bank account</P>
+                    <div class="col-lg-6">
+                        <div class="text-center pricing-plan-heading">
+                            <h2 class="mb-14 rv-text-anime">Great Transparent Plan</h2>
+                            <P class="px-lg-40 fs-5 mb-20 text-anim">Users interested in investing in real estate can register on the platform by providing their own bank account</P>
                         </div>
                     </div>
                 </div>
@@ -574,10 +571,10 @@
                         <div class="tab-content" id="pricing-plan-tab">
                             <!-- Deposit -->
                             <div class="tab-pane fadeInUp active show" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
-                                <div class="row">
+                                <div class="row g-30">
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -635,7 +632,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item active">
+                                        <div class="pricing-plan-item mb-20 active">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -693,7 +690,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -753,10 +750,10 @@
                             </div>
                             <!-- Penson -->
                             <div class="tab-pane fadeInUp" id="penson" role="tabpanel" aria-labelledby="penson-tab">
-                                <div class="row">
+                                <div class="row g-30">
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -814,7 +811,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item active">
+                                        <div class="pricing-plan-item mb-20 active">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -872,7 +869,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -931,10 +928,10 @@
                                 </div><!-- row -->
                             </div>
                             <div class="tab-pane fadeInUp" id="loan" role="tabpanel" aria-labelledby="loan-tab">
-                                <div class="row">
+                                <div class="row g-30">
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -992,7 +989,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item active">
+                                        <div class="pricing-plan-item mb-20 active">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -1050,7 +1047,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <!--== pricing-plan-item ==-->
-                                        <div class="pricing-plan-item">
+                                        <div class="pricing-plan-item mb-20">
                                             <div class="pricing-plan-header">
                                                 <!-- pricing-plan-header -->
                                                 <div class="d-flex gap-20 mb-20 align-items-center">
@@ -1116,20 +1113,20 @@
         <!-- ========= END PRICING PLAN ========= -->
 
         <!-- ========= START TESTIMONIAL ========= -->
-        <section class="section-testimonial pt-65 pb-65">
+        <section class="section-testimonial pb-lg-60 pb-20">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <div class="section-heading mb-40 pe-lg-120">
-                            <h2 class="mb-30 title-anim">What Say Our Customer About BigiBa</h2>
-                            <P class="mb-0">Users interested in investing in real estate can register on the platform by providing their own bank account</P>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-heading mb-lg-40 mb-30 pe-lg-120">
+                            <h2 class="mb-lg-30 mb-20 rv-text-anime">What Say Our Customer About BigiBa</h2>
+                            <P class="mb-0 text-anim">Users interested in investing in real estate can register on the platform by providing their own bank account</P>
                         </div>
                         <!-- Swiper -->
                         <div class="swiper testimonial-slider pb-60">
                             <div class="swiper-wrapper">
                                 <!-- testimonial-slide-item -->
                                 <div class="swiper-slide testimonial-slide-item">
-                                    <div class="testimonial-slide-header d-flex justify-content-between align-items-center gap-30">
+                                    <div class="testimonial-slide-header d-flex flex-sm-row flex-column justify-content-between align-items-center gap-sm-30 gap-14">
                                         <div class="testimonial-author-info">
                                             <div class="image">
                                                 <img src="assets/images/testimonial/testimonial-1.png" alt="testimonial">
@@ -1157,7 +1154,7 @@
                                 </div>
                                 <!-- testimonial-slide-item -->
                                 <div class="swiper-slide testimonial-slide-item">
-                                    <div class="testimonial-slide-header d-flex justify-content-between align-items-center gap-30">
+                                    <div class="testimonial-slide-header d-flex flex-sm-row flex-column justify-content-between align-items-center gap-sm-30 gap-14">
                                         <div class="testimonial-author-info">
                                             <div class="image">
                                                 <img src="assets/images/testimonial/testimonial-9.png" alt="testimonial">
@@ -1185,7 +1182,7 @@
                                 </div>
                                 <!-- testimonial-slide-item -->
                                 <div class="swiper-slide testimonial-slide-item">
-                                    <div class="testimonial-slide-header d-flex justify-content-between align-items-center gap-30">
+                                    <div class="testimonial-slide-header d-flex flex-sm-row flex-column justify-content-between align-items-center gap-sm-30 gap-14">
                                         <div class="testimonial-author-info">
                                             <div class="image">
                                                 <img src="assets/images/testimonial/testimonial-10.png" alt="testimonial">
@@ -1213,7 +1210,7 @@
                                 </div>
                                 <!-- testimonial-slide-item -->
                                 <div class="swiper-slide testimonial-slide-item">
-                                    <div class="testimonial-slide-header d-flex justify-content-between align-items-center gap-30">
+                                    <div class="testimonial-slide-header d-flex flex-sm-row flex-column justify-content-between align-items-center gap-sm-30 gap-14">
                                         <div class="testimonial-author-info">
                                             <div class="image">
                                                 <img src="assets/images/testimonial/testimonial-1.png" alt="testimonial">
@@ -1243,7 +1240,7 @@
                         </div>
                         <div class="testimonial-pagination"></div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6">
 
                         <!-- testimonial-paralax -->
                         <div class="testimonial-paralax">
@@ -1256,20 +1253,19 @@
                             <img class="paralax-img image-7" src="assets/images/testimonial/testimonial-8.png" alt="testimonial">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
         <!-- ========= END TESTIMONIAL ========= -->
 
         <!-- ========= Start faq ========= -->
-        <section class="section-faq pt-65 pb-65">
+        <section class="section-faq pt-lg-60 pt-20 pb-lg-60 pb-20">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-4">
-                        <div class="section-heading">
-                            <h2 class="mb-30 title-anim">Frequently Asked Questions</h2>
-                            <P class="mb-40">Users interested in investing in real estate can register on the platform by providing their financial Users interested in investing in real estate can register on the platform by</P>
+                        <div class="section-heading pb-30">
+                            <h2 class="mb-30 rv-text-anime">Frequently Asked Questions</h2>
+                            <P class="mb-40 text-anim">Users interested in investing in real estate can register on the platform by providing their financial Users interested in investing in real estate can register on the platform by</P>
                             <a href="#" class="hover-target btn btn-primary border-radius-43">Contact Us for More</a>
                         </div>
                     </div>
@@ -1313,17 +1309,17 @@
         <!-- ========= END faq ========= -->
 
         <!-- ========= Start Blog Post ========= -->
-        <section class="section-blog-post pt-65 pb-65">
+        <section class="section-blog-post pt-60 pb-lg-80 pb-20">
             <div class="container">
-                <div class="section-heading mb-lg-40 mb-30 d-flex gap-30 align-items-center justify-content-between">
-                    <h2 class="mb-0 title-anim">Read Our Blog Post</h2>
+                <div class="section-heading mb-lg-40 mb-30 d-flex gap-30 flex-wrap align-items-center justify-content-between">
+                    <h2 class="mb-0 rv-text-anime">Read Our Blog Post</h2>
                     <a href="#" class="hover-target btn btn-primary border-radius-43">All Blog post</a>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
                         <!-- single-blog-post -->
                         <div class="single-blog-post">
-                            <div class="single-blog-post-image">
+                            <div class="single-blog-post-image hover14">
                                 <img src="assets/images/blog/blog-sm-1.png" alt="blog">
                             </div>
                             <div class="single-blog-post-body">
@@ -1331,13 +1327,13 @@
                                     <a class="author small fw-medium" href="#"><i class="fa-light fa-circle-user"></i> By Farazzak</a>
                                     <a class="post-date small fw-medium" href="Jun 8, 2023"><i class="fa-light fa-calendar"></i> Jun 8, 2023</a>
                                 </div>
-                                <h4 class="post-title fw-semibold font-family-inter mb-18"><a href="#">Top 10 Finance Software for Your Banking</a></h4>
-                                <p class="fw-medium mb-20">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
+                                <h4 class="post-title rv-text-anime fw-semibold font-family-inter mb-18"><a href="#">Top 10 Finance Software for Your Banking</a></h4>
+                                <p class="fw-medium mb-20 text-anim">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
                                 <a class="read_more_btn" href="#">Know More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <!-- single-blog-post -->
                         <div class="single-blog-post">
                             <div class="single-blog-post-image">
@@ -1348,13 +1344,13 @@
                                     <a class="author small fw-medium" href="#"><i class="fa-light fa-circle-user"></i> By Farazzak</a>
                                     <a class="post-date small fw-medium" href="Jun 8, 2023"><i class="fa-light fa-calendar"></i> Jun 8, 2023</a>
                                 </div>
-                                <h4 class="post-title fw-semibold font-family-inter mb-18"><a href="#">How To Create Your First Bank Account </a></h4>
-                                <p class="fw-medium mb-20">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
+                                <h4 class="post-title rv-text-anime fw-semibold font-family-inter mb-18"><a href="#">How To Create Your First Bank Account </a></h4>
+                                <p class="fw-medium mb-20 text-anim">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
                                 <a class="read_more_btn" href="#">Know More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <!-- single-blog-post -->
                         <div class="single-blog-post">
                             <div class="single-blog-post-image">
@@ -1365,8 +1361,8 @@
                                     <a class="author small fw-medium" href="#"><i class="fa-light fa-circle-user"></i> By Farazzak</a>
                                     <a class="post-date small fw-medium" href="Jun 8, 2023"><i class="fa-light fa-calendar"></i> Jun 8, 2023</a>
                                 </div>
-                                <h4 class="post-title fw-semibold font-family-inter mb-18"><a href="#">How To Maintain Your First Bank Account Easily</a></h4>
-                                <p class="fw-medium mb-20">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
+                                <h4 class="post-title rv-text-anime fw-semibold font-family-inter mb-18"><a href="#">How To Maintain Your First Bank Account Easily</a></h4>
+                                <p class="fw-medium mb-20 text-anim">Sed ut perspiciatis unde om istenat aeruwr oieueu nti doloremque</p>
                                 <a class="read_more_btn" href="#">Know More</a>
                             </div>
                         </div>
@@ -1376,7 +1372,8 @@
         </section>
         <!-- ========= End Blog Post ========= -->
         
-        <footer class="footer pt-80 pb-50" style="background: url(assets/images/footer/footer-bg.png) no-repeat scroll center center / cover;" data-bs-theme="dark">
+        <!-- ========= Start Footer ========= -->
+        <footer class="footer pt-80 pb-50" style="background: url(assets/images/footer/footer-bg.png) no-repeat scroll center center / cover;">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-3">
@@ -1394,7 +1391,7 @@
                     </div>
                     <div class="col-lg-2">
                         <!-- footer-widget -->
-                        <div class="footer-widget mb-30" data-bs-theme="dark">
+                        <div class="footer-widget mb-30">
                             <h5 class="mb-24">Useful Links</h5>
                             <div class="footer-widget-item">
                                 <ul class="reset-ul">
@@ -1451,8 +1448,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-copyright pt-20">
+                <!-- footer-copyright -->
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -1463,21 +1460,14 @@
                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                             <p class="fw-medium small text-center mb-0">© <span class="dynamic-year"></span> DigiBa - Digital Banking Website . All Rights Reserved.</p>
-
                         </div>
                     </div>
                 </div>
             </div>
-
         </footer>
-       
+        <!-- ========= End Footer ========= -->
 
     </div><!-- End pages -->
-
-    
-    
-    
-    
 
     <!-- jQuery Js -->
     <script src="assets/js/jquery-min.js"></script>
@@ -1501,9 +1491,8 @@
     <script src="assets/js/vendor/ScrollSmoother.min.js"></script>
     <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
     <script src="assets/js/vendor/TweenMax.min.js"></script>
+    <script src="assets/js/vendor/split-type-0.3.3.min.js"></script>
 
-
-   
     <!-- custom -->
     <script src="assets/js/script.js"></script>
 

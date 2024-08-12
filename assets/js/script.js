@@ -83,6 +83,8 @@
         }
     });
 
+    //===== FIXED HEADER
+
     /*--------------------------------------------------------
     /  01. Mobile menu Start
     /--------------------------------------------------------*/
@@ -188,6 +190,50 @@
     });
     /*================ END  =====================*/
 
+    function textAnimate(sliderElement) {
+        const textsToAnimate = sliderElement.querySelectorAll(".rv-text-anime");
+        textsToAnimate.forEach(textToAnimate => {
+            const animate = new SplitType(textToAnimate, { types: 'words , chars' });
+            gsap.from(animate.chars, {
+                opacity: 0,
+                x: 70,
+                duration: 0.8,
+                stagger: { amount: 0.9 },
+                scrollTrigger: {
+                    trigger: textToAnimate,
+                    start: "top 95%",
+                }
+            });
+        })
+    };
+
+    textAnimate(document);
+
+    /////////////////////////////////////////////////////
+    // 27. Text Animation
+    let splitTextLines = gsap.utils.toArray(".text-anim");
+
+    splitTextLines.forEach(splitTextLine => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitTextLine,
+          start: 'top 95%',
+          duration: 2,
+          end: 'bottom 60%',
+          scrub: false,
+          markers: false,
+          toggleActions: 'play none none none'
+        }
+      });
+
+      const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
+      gsap.set(splitTextLine, { perspective: 400 });
+      itemSplitted.split({ type: "lines" })
+      tl.from(itemSplitted.lines, { duration: 1, delay: 0.5, opacity: 0, rotationX: -80, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
+    });
+    /////////////////////////////////////////////////////
+
+
     /*================ Testimonial-paralax start  =====================*/
     const testimonialParalax = document.querySelector('.testimonial-paralax');
     const imgs = document.querySelectorAll('.paralax-img');
@@ -204,12 +250,6 @@
         const bgMoveX = moveX * 10; //15px horizontal movement
         const bgMoveY = moveY * 10; // 20px vertical movement
 
-        gsap.to(testimonialParalax, {
-            backgroundPosition: `${bgMoveX}px ${bgMoveY}px`,
-            duration: 0.8,
-            ease: 'power2.out'
-        });
-
         imgs.forEach((img, index) => {
             const depth = (index + 1) * 10; // Adjust the depth factor as needed
             const targetX = moveX * depth;
@@ -225,13 +265,6 @@
     });
 
     testimonialParalax.addEventListener('mouseleave', () => {
-        // Reset background position
-        gsap.to(testimonialParalax, {
-            backgroundPosition: '0px 0px',
-            duration: 0.8,
-            ease: 'power2.out'
-        });
-
         // Reset positions of images smoothly using GSAP
         imgs.forEach((img) => {
             gsap.to(img, {
@@ -290,46 +323,6 @@
 })(jQuery);
 
 
-// Bootstarp menu
-
-// document.addEventListener("DOMContentLoaded", function(){
-//     /////// Prevent closing from click inside dropdown
-//     document.querySelectorAll('.dropdown-menu').forEach(function(element){
-//         element.addEventListener('click', function (e) {
-//           e.stopPropagation();
-//         });
-//     })
-//     // make it as accordion for smaller screens
-//     if (window.innerWidth < 992) {
-//         // close all inner dropdowns when parent is closed
-//         document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-//             everydropdown.addEventListener('hidden.bs.dropdown', function () {
-//                 // after dropdown is hidden, then find all submenus
-//                   this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-//                       // hide every submenu as well
-//                       everysubmenu.style.display = 'none';
-//                   });
-//             })
-//         });
-//         document.querySelectorAll('.dropdown-menu a').forEach(function(element){
-//             element.addEventListener('click', function (e) {
-    
-//                 let nextEl = this.nextElementSibling;
-//                 if(nextEl && nextEl.classList.contains('submenu')) {	
-//                 // prevent opening link if link needs to open dropdown
-//                 e.preventDefault();
-//                 console.log(nextEl);
-//                 if(nextEl.style.display == 'block'){
-//                     nextEl.style.display = 'none';
-//                 } else {
-//                     nextEl.style.display = 'block';
-//                 }
-//                 }
-//             });
-//         })
-//     }
-//     // end if innerWidth
-// }); 
 
 // Hover Menu
 document.addEventListener("DOMContentLoaded", function () {

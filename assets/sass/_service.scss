@@ -22,6 +22,9 @@
     
     .service-body{
         padding: 38px 27px 26px 27px;
+        @include media-breakpoint-down(lg){
+            padding: 20px 20px 20px 20px;
+        }
     }
     .service-title{
         a{

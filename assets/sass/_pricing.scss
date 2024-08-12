@@ -85,6 +85,34 @@
   }
 }
 
+.section-pricing{
+  position: relative;
+  z-index: 1;
+  &::after{
+    position: absolute;
+    content: "";
+    background: url(../images/testimonial/pararax-bg.png) no-repeat scroll center center/cover;
+    right: 30px;
+    top: 4%;
+    height: 315px;
+    width: 440px;
+    overflow: hidden;
+    z-index: -1;
+  }
+  &::before{
+    position: absolute;
+    content: "";
+    background: url(../images/testimonial/pararax-bg.png) no-repeat scroll center center/cover;
+    left: 0;
+    top: 10%;
+    height: 315px;
+    width: 440px;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+}
+
 
 @keyframes fadeInUp {
   0% {

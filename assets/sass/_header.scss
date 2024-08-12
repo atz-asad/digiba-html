@@ -95,9 +95,6 @@
   top: 0;
   left: -1px;
 }
-.nav-link .dropdown-toggle .active{
-
-}
 
 .sticky-navbar {
   position: fixed;
@@ -106,6 +103,7 @@
   z-index: 1000;
   animation: fadeInDown 0.5s;
 }
+
 @keyframes fadeInDown {
   0% {
       opacity: 0;
@@ -163,6 +161,10 @@
   border: 0;
   background: var(--bs-primary);
   z-index: 1000;
+  transition: all 0.4s ease;
+  &:hover{
+    box-shadow: 0px 0px 5px 5px rgba(var(--bs-primary-rgb), 0.24);
+  }
 }
 .menu-toggler span {
   position: relative;
@@ -181,20 +183,20 @@
 .menu-toggler span:nth-child(3) {
   top: 4px;
 }
-.menu-toggler.active span:nth-child(1) {
-  top: 0;
-  transform: rotateZ(45deg);
-  transition: top 200ms 0ms, transform 200ms 160ms;
-}
-.menu-toggler.active span:nth-child(2) {
-  transform: scale(0);
-}
+// .menu-toggler.active span:nth-child(1) {
+//   top: 0;
+//   transform: rotateZ(45deg);
+//   transition: top 200ms 0ms, transform 200ms 160ms;
+// }
+// .menu-toggler.active span:nth-child(2) {
+//   transform: scale(0);
+// }
 
-.menu-toggler.active span:nth-child(3) {
-  top: -4px;
-  transform: rotateZ(-45deg);
-  transition: top 200ms 0ms, transform 200ms 160ms;
-}
+// .menu-toggler.active span:nth-child(3) {
+//   top: -4px;
+//   transform: rotateZ(-45deg);
+//   transition: top 200ms 0ms, transform 200ms 160ms;
+// }
 
 // menu offcanvas
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
@@ -249,12 +251,13 @@
   right: 0px;
   font-size: 14px;
   top: 10px;
-  color: currentColor;
+  color: var(--bs-heading-color);
   transition: all 0.3s ease;
 }
 .main_nenu ul .openUL.dropdown-arrow::before {
   font-family: "Font Awesome 6 Pro";
   content: "\f068";
+  color: var(--bs-primary);
 }
 .main_nenu li a {
   font-size: 16px;
@@ -277,16 +280,14 @@
 
 
 .mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close {
-  color: #fff;
+  color: var(--bs-white);
   right: -6px;
   text-align: right;
-  padding-right: 6px;
-  width: 44px;
+  width: 30px;
   background: var(--bs-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  right: -45px;
-  top: -4px !important;
+  height: 30px;
 }
