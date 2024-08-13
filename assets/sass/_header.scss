@@ -279,6 +279,30 @@
 }
 
 
+
+.nice-select {
+	background-color: transparent;
+}
+.nice-select::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Pro";
+  content: "\2b";
+  right: 0px;
+  font-size: 14px;
+  color: var(--bs-heading-color);
+  border: 0;
+  transform: rotate(0);
+  margin-top: -20px;
+}
+.nice-select.open::after {
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+  content: "\f068";
+  font-family: "Font Awesome 6 Pro";
+}
+
+
 .mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close {
   color: var(--bs-white);
   right: -6px;
