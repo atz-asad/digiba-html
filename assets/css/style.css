@@ -20733,6 +20733,7 @@ textarea.form-control-lg {
   --bs-heading-color: #080C15;
   --bs-heading-color-rgb: 8, 12, 21;
   --bs-border: #DFDFDF;
+  --bs-border-rgb: 223, 223, 223;
   --bs-accordion-btn-color: #171725;
   --bs-post-title: #181B1D;
   --font-family-inter: "Inter", sans-serif;
@@ -20742,8 +20743,6 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] {
-  --bs-primary: #197BFF;
-  --bs-primary-rgb: 25, 123, 255;
   --bs-body-bg: #080C15;
   --bs-body-bg-rgb: 8, 12, 21;
   --bs-body-color: #686868;
@@ -21360,6 +21359,52 @@ textarea.form-control-lg {
   height: auto;
 }
 
+.section-hero-style-2 {
+  background: linear-gradient(102deg, #FFF4ED 0%, #FFF8F3 99.63%);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.section-hero-style-2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: url(../images/hero/hero-bg-vactor.png) no-repeat scroll center center;
+  z-index: -1;
+  width: 70%;
+  height: 647px;
+}
+@media (max-width: 991.98px) {
+  .section-hero-style-2::before {
+    width: 100%;
+  }
+}
+.section-hero-style-2 .sub-title {
+  color: var(--bs-body-color);
+  font-family: var(--bs-body-font-family);
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: #FFEDE0;
+  padding: 10px 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.section-hero-style-2 .hero-image-wrapper-2 {
+  border-radius: 24px;
+  overflow: hidden;
+  margin-left: auto;
+}
+.section-hero-style-2 .hero-image-wrapper-2 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+.section-hero-style-2 .content .hero-description {
+  max-width: 480px;
+}
+
 /************************************/
 /******** Accordion CSS Start ******/
 /**********************************/
@@ -21438,7 +21483,6 @@ button.accordion-button.collapsed {
   width: 94px;
   height: 92px;
   border-radius: 12px;
-  background: #EDFCFA;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21455,6 +21499,9 @@ button.accordion-button.collapsed {
     padding: 20px 20px 20px 20px;
   }
 }
+.service-item .service-title {
+  font-family: var(--font-family-inter);
+}
 .service-item .service-title a {
   text-decoration: none;
   color: currentColor;
@@ -21470,54 +21517,82 @@ button.accordion-button.collapsed {
   box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
 }
 
-/**===========================
-===== service-item style 2
-==============================
-*/
+/** === service-item style 2 === */
 .service-item-style-2 {
-  background: var(--bs-white);
-  border-radius: 12px;
-  transition: all 0.4s ease;
   padding: 34px 30px 24px 30px;
-}
-.service-item-style-2 .service-icon {
-  width: 94px;
-  height: 92px;
-  border-radius: 12px;
-  background: #EDFCFA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.service-item-style-2 .service-icon img {
-  border-radius: 12px;
 }
 .service-item-style-2 .service-body {
   padding: 26px 0px 0px 0px;
-}
-.service-item-style-2 .service-icon.account {
-  background: #F8F2FE;
-}
-.service-item-style-2 .service-icon.transfer {
-  background: #FFF6F2;
-}
-.service-item-style-2 .service-icon.money-request {
-  background: #FFF2F6;
 }
 .service-item-style-2 .service-title {
   margin-bottom: 14px;
 }
 .service-item-style-2 .service-desc {
+  margin-bottom: 18px;
+}
+.service-item-style-2:hover {
+  box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+}
+
+/** === service-item style 3 === */
+.service-item-style-3 {
+  background: var(--bs-white);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid var(--bs-border-color);
+}
+.service-item-style-3 .service-item-header {
+  border-radius: 12px;
+  padding: 30px;
+  background: #FFF1FE;
+}
+.service-item-style-3 .service-header-bg-2 {
+  background: #F1F7FF;
+}
+.service-item-style-3 .service-header-bg-3 {
+  background: #FFF9F1;
+}
+.service-item-style-3 .service-header-bg-4 {
+  background: #F4F1FF;
+}
+.service-item-style-3 .service-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.service-item-style-3 .service-icon img {
+  border-radius: 8px;
+}
+.service-item-style-3 .service-body {
+  padding: 35px 27px 25px 27px;
+}
+@media (max-width: 991.98px) {
+  .service-item-style-3 .service-body {
+    padding: 20px 20px 20px 20px;
+  }
+}
+.service-item-style-3 .service-title {
+  font-family: var(--font-family-inter);
+  margin-bottom: 18px;
+}
+.service-item-style-3 .service-title a {
+  text-decoration: none;
+  color: currentColor;
+}
+.service-item-style-3 .service-desc {
   color: var(--bs-body-color);
   font-family: var(--bs-body-font-family);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.429;
-  margin-bottom: 18px;
 }
-.service-item-style-2:hover {
+.service-item-style-3:hover {
   box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+  border: 1px solid var(--bs-body-bg);
 }
 
 /****************************/

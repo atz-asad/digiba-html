@@ -2,8 +2,6 @@
 /******** Hero css ******/
 /***********************/
 .section-hero{
-
-  
     .section-hero .hero-title {
         max-width: 555px;
     }
@@ -41,12 +39,57 @@
         height: auto;
     }
 }
+
+.section-hero-style-2{
+    // background: rgba(var);
+    background: linear-gradient(102deg, #FFF4ED 0%, #FFF8F3 99.63%);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        background: url(../images/hero/hero-bg-vactor.png) no-repeat scroll center center ;
+        z-index: -1;
+        width: 70%;
+        height: 647px;
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+    }
+    .sub-title{
+        color: var(--bs-body-color);
+        font-family: var(--bs-body-font-family);
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background: #FFEDE0;
+        padding: 10px 6px;
+        margin-bottom: 6px;
+        display: inline-block;
+    }
+    .hero-image-wrapper-2{
+        // width: 100%;
+        // height: 570px;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-left: auto;
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 24px;
+        }
+    }
+    .content .hero-description{
+        max-width: 480px;
+    }
+}
+
 /************************************/
 /******** Accordion CSS Start ******/
 /**********************************/
-
-
-
 
 .accordion {
     --#{$prefix}accordion-btn-focus-box-shadow: 0;

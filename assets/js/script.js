@@ -190,7 +190,7 @@
     /*================ END  =====================*/
 
     function textAnimate(sliderElement) {
-        const textsToAnimate = sliderElement.querySelectorAll(".rv-text-anime");
+        const textsToAnimate = sliderElement.querySelectorAll(".sec-title-anim");
         textsToAnimate.forEach(textToAnimate => {
             const animate = new SplitType(textToAnimate, { types: 'words , chars' });
             gsap.from(animate.chars, {
