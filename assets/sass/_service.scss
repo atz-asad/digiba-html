@@ -124,3 +124,21 @@
     }
 }
 
+.service-item-style-4{
+    padding: 34px 30px 24px 30px;
+    border-radius: 0;
+    border: 1px solid var(--bs-border-color);
+    .service-body{
+        padding: 26px 0px 0px 0px;
+    }
+    .service-title{
+        margin-bottom: 14px;
+    }
+    .service-desc{
+        margin-bottom: 18px;
+    }
+    &:hover{
+        box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+        border: 1px solid var(--bs-primary);
+    }
+}

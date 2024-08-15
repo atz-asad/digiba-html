@@ -233,47 +233,51 @@
     /////////////////////////////////////////////////////
 
 
+
     /*================ Testimonial-paralax start  =====================*/
-    const testimonialParalax = document.querySelector('.testimonial-paralax');
-    const imgs = document.querySelectorAll('.paralax-img');
+    if ($('.testimonial-paralax').length > 0) {
 
-    testimonialParalax.addEventListener('mousemove', (e) => {
-        const { offsetX, offsetY, currentTarget } = e;
-        const width = currentTarget.offsetWidth;
-        const height = currentTarget.offsetHeight;
-
-        const moveX = (offsetX / width) - 0.5;
-        const moveY = (offsetY / height) - 0.5;
-
-        // Background movement in pixels
-        const bgMoveX = moveX * 10; //15px horizontal movement
-        const bgMoveY = moveY * 10; // 20px vertical movement
-
-        imgs.forEach((img, index) => {
-            const depth = (index + 1) * 10; // Adjust the depth factor as needed
-            const targetX = moveX * depth;
-            const targetY = moveY * depth;
-
-            gsap.to(img, {
-                x: targetX,
-                y: targetY,
-                duration: 0.8,  // Smooth transition duration
-                ease: 'power2.out'  // Easing function
+        const testimonialParalax = document.querySelector('.testimonial-paralax');
+        const imgs = document.querySelectorAll('.paralax-img');
+    
+        testimonialParalax.addEventListener('mousemove', (e) => {
+            const { offsetX, offsetY, currentTarget } = e;
+            const width = currentTarget.offsetWidth;
+            const height = currentTarget.offsetHeight;
+    
+            const moveX = (offsetX / width) - 0.5;
+            const moveY = (offsetY / height) - 0.5;
+    
+            // Background movement in pixels
+            const bgMoveX = moveX * 10; //15px horizontal movement
+            const bgMoveY = moveY * 10; // 20px vertical movement
+    
+            imgs.forEach((img, index) => {
+                const depth = (index + 1) * 10; // Adjust the depth factor as needed
+                const targetX = moveX * depth;
+                const targetY = moveY * depth;
+    
+                gsap.to(img, {
+                    x: targetX,
+                    y: targetY,
+                    duration: 0.8,  // Smooth transition duration
+                    ease: 'power2.out'  // Easing function
+                });
             });
         });
-    });
-
-    testimonialParalax.addEventListener('mouseleave', () => {
-        // Reset positions of images smoothly using GSAP
-        imgs.forEach((img) => {
-            gsap.to(img, {
-                x: 0,
-                y: 0,
-                duration: 0.8,
-                ease: 'power2.out'
+    
+        testimonialParalax.addEventListener('mouseleave', () => {
+            // Reset positions of images smoothly using GSAP
+            imgs.forEach((img) => {
+                gsap.to(img, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power2.out'
+                });
             });
         });
-    });
+    }
     /*================ Testimonial-paralax End  =====================*/
 
     /*============== Testimonial Slider ==================*/
@@ -281,10 +285,35 @@
         var swiper = new Swiper(".testimonial-slider", {
             speed: 1000,
             spaceBetween: 30,
+            loop: true,
             pagination: {
             el: '.testimonial-pagination',
             clickable: true
             }
+        });
+    };
+    if ($('.testimonial-slider-2').length > 0) {
+        var swiper2 = new Swiper(".testimonial-slider-2", {
+            speed: 1000,
+            spaceBetween: 60,
+            slidesPerView: 2,
+            loop: true,
+            pagination: {
+                el: '.testimonial-pagination-2',
+                clickable: true
+            },
+            breakpoints: {
+                
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 40,
+                },
+                992: {
+                  slidesPerView: 2,
+                  spaceBetween: 60,
+                },
+              },
+
         });
     }
     /*================ End =====================*/

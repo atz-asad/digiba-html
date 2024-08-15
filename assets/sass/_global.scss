@@ -28,7 +28,7 @@
     --bs-border: #DFDFDF;
     --bs-border-rgb: 223, 223, 223;
     --bs-accordion-btn-color: #171725;
-    --bs-post-title: #181B1D;
+    --bs-card-title: #181B1D;
 
     --font-family-inter: "Inter", sans-serif;
     --font-family-heading: "Outfit", sans-serif;
@@ -48,7 +48,7 @@
 
     --bs-border: #DFDFDF;
     --bs-accordion-btn-color: #171725;
-    --bs-post-title: #181B1D;
+    --bs-card-title: #181B1D;
 
 }
 
@@ -70,7 +70,10 @@
 .pages{
     overflow-x: hidden;
 }
-  
+
+.shadow-primary{
+    box-shadow: 0px 25px 50px 0px rgba(var(--bs-primary-rgb), 0.24);;
+}
 
 /* Magic cursor css start */
 

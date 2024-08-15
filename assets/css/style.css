@@ -4540,7 +4540,7 @@ textarea.form-control-lg {
 .nav-tabs {
   --bs-nav-tabs-border-width: 0;
   --bs-nav-tabs-border-color: var(--bs-border-color);
-  --bs-nav-tabs-border-radius: 0;
+  --bs-nav-tabs-border-radius: var(--bs-border-radius);
   --bs-nav-tabs-link-hover-border-color: 0;
   --bs-nav-tabs-link-active-color: var(--bs-white);
   --bs-nav-tabs-link-active-bg: var(--bs-primary);
@@ -20735,7 +20735,7 @@ textarea.form-control-lg {
   --bs-border: #DFDFDF;
   --bs-border-rgb: 223, 223, 223;
   --bs-accordion-btn-color: #171725;
-  --bs-post-title: #181B1D;
+  --bs-card-title: #181B1D;
   --font-family-inter: "Inter", sans-serif;
   --font-family-heading: "Outfit", sans-serif;
   --bs-body-font-family: "Manrope", sans-serif;
@@ -20750,7 +20750,7 @@ textarea.form-control-lg {
   --bs-heading-color-rgb: 255, 255, 255;
   --bs-border: #DFDFDF;
   --bs-accordion-btn-color: #171725;
-  --bs-post-title: #181B1D;
+  --bs-card-title: #181B1D;
 }
 
 .body-font-family {
@@ -20773,6 +20773,10 @@ textarea.form-control-lg {
 
 .pages {
   overflow-x: hidden;
+}
+
+.shadow-primary {
+  box-shadow: 0px 25px 50px 0px rgba(var(--bs-primary-rgb), 0.24);
 }
 
 /* Magic cursor css start */
@@ -21152,6 +21156,13 @@ textarea.form-control-lg {
   background: var(--bs-primary);
 }
 
+.nav-tabs-style-2 {
+  background: #FFF8F2;
+}
+.nav-tabs-style-2 .nav-link {
+  border-radius: 8px;
+}
+
 /**************************/
 /******** Buttons CSS ******/
 /**************************/
@@ -21247,6 +21258,7 @@ textarea.form-control-lg {
   text-decoration: none;
   font-size: 16px;
   transition: all 0.4s ease-in-out;
+  color: var(--bs-primary);
 }
 .socials a:hover {
   background: rgba(var(--bs-primary-rgb), 1);
@@ -21405,72 +21417,6 @@ textarea.form-control-lg {
   max-width: 480px;
 }
 
-/************************************/
-/******** Accordion CSS Start ******/
-/**********************************/
-.accordion {
-  --bs-accordion-btn-focus-box-shadow: 0;
-}
-.accordion .accordion-item {
-  border-radius: 8px;
-}
-.accordion .accordion-item:not(:last-child) {
-  margin-bottom: 24px;
-}
-.accordion .accordion-body {
-  padding: 0px 30px 20px 30px;
-  background: var(--bs-white);
-  border-radius: 0 0 8px 8px;
-}
-
-.accordion-button::after {
-  content: "+";
-  font-family: "Font Awesome 6 Pro";
-  color: var(--bs-primary);
-  background-image: none;
-}
-
-.accordion-button:not(.collapsed)::after {
-  content: "\f068";
-  font-family: "Font Awesome 6 Pro";
-  background-image: none;
-  transform: inherit;
-}
-
-.accordion-button {
-  border-radius: 8px 8px 8px 8px;
-  padding: 20px 30px 20px 30px;
-  color: var(-bs-accordion-btn-color);
-  font-family: var(--font-family-inter);
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.accordion-item:first-of-type > .accordion-header .accordion-button {
-  border-radius: 8px 8px 0 0;
-}
-
-.accordion-item:first-of-type > .accordion-header .accordion-button.collapsed {
-  border-radius: 8px 8px 8px 8px;
-}
-
-.accordion-button:not(.collapsed) {
-  border-radius: 8px 8px 0px 0px;
-}
-
-button.accordion-button.collapsed {
-  border-radius: 8px 8px 8px 8px;
-}
-
-.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
-  border-radius: 8px 8px 8px 8px;
-}
-
-/**********************************/
-/******** Accordion CSS End ******/
-/********************************/
 /****************************/
 /******** service CSS ******/
 /**************************/
@@ -21595,6 +21541,25 @@ button.accordion-button.collapsed {
   border: 1px solid var(--bs-body-bg);
 }
 
+.service-item-style-4 {
+  padding: 34px 30px 24px 30px;
+  border-radius: 0;
+  border: 1px solid var(--bs-border-color);
+}
+.service-item-style-4 .service-body {
+  padding: 26px 0px 0px 0px;
+}
+.service-item-style-4 .service-title {
+  margin-bottom: 14px;
+}
+.service-item-style-4 .service-desc {
+  margin-bottom: 18px;
+}
+.service-item-style-4:hover {
+  box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
+  border: 1px solid var(--bs-primary);
+}
+
 /****************************/
 /******** About CSS ********/
 /**************************/
@@ -21618,10 +21583,10 @@ button.accordion-button.collapsed {
   width: 65px;
   height: 65px;
   border-radius: 8px;
-  background: var(--bs-primary);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 @media (max-width: 767.98px) {
   .about-item .icon {
@@ -21633,10 +21598,17 @@ button.accordion-button.collapsed {
   }
 }
 
-.section-achievement {
-  background: url(../images/about/acrivment.png) no-repeat scroll center center/cover;
+.customers-iamges {
+  display: flex;
 }
-.section-achievement .achievement-item-wrapper {
+.customers-iamges img {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+.achievement-item-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -21644,22 +21616,22 @@ button.accordion-button.collapsed {
   column-gap: 124px;
 }
 @media (max-width: 1399.98px) {
-  .section-achievement .achievement-item-wrapper {
+  .achievement-item-wrapper {
     gap: 20px;
   }
 }
 @media (max-width: 1199.98px) {
-  .section-achievement .achievement-item-wrapper {
+  .achievement-item-wrapper {
     gap: 30px;
     justify-content: center;
   }
 }
-.section-achievement .achievement-item-wrapper .achievement-item {
+.achievement-item-wrapper .achievement-item {
   padding: 6px 30px 20px 42px;
   position: relative;
   z-index: 1;
 }
-.section-achievement .achievement-item-wrapper .achievement-item::after {
+.achievement-item-wrapper .achievement-item::after {
   position: absolute;
   content: "";
   right: -102px;
@@ -21671,36 +21643,124 @@ button.accordion-button.collapsed {
   transform: translateY(-50%);
 }
 @media (max-width: 1399.98px) {
-  .section-achievement .achievement-item-wrapper .achievement-item::after {
+  .achievement-item-wrapper .achievement-item::after {
     right: -60px;
     width: 50px;
   }
 }
 @media (max-width: 1199.98px) {
-  .section-achievement .achievement-item-wrapper .achievement-item::after {
+  .achievement-item-wrapper .achievement-item::after {
     display: none;
   }
 }
-.section-achievement .achievement-item-wrapper .achievement-item:last-child::after {
+.achievement-item-wrapper .achievement-item:last-child::after {
   display: none;
 }
-.section-achievement .achievement-item-wrapper .achievement-item .achievement-icon {
+.achievement-item-wrapper .achievement-item .achievement-icon {
   height: 46px;
   width: 46px;
 }
-.section-achievement .achievement-item-wrapper .achievement-item .achievement-icon img {
+.achievement-item-wrapper .achievement-item .achievement-icon img {
   border-radius: 6px;
 }
-.section-achievement .achievement-item-wrapper .achievement-item .achievement-body {
+.achievement-item-wrapper .achievement-item .achievement-body {
   padding-top: 30px;
 }
-.section-achievement .achievement-item-wrapper .achievement-item svg {
+.achievement-item-wrapper .achievement-item svg {
   position: absolute;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.achievement-bg {
+  background: url(../images/about/acrivment.png) no-repeat scroll center center/cover;
+}
+
+.acrivment-heading {
+  max-width: 550px;
+}
+
+.acrivment-image {
+  width: 100%;
+  height: 525px;
+  border-radius: 0 25px 25px 0;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .acrivment-image {
+    height: 300px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .acrivment-image {
+    height: 230px;
+  }
+}
+.acrivment-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 25px 25px 0;
+}
+@media (max-width: 991.98px) {
+  .acrivment-image img {
+    border-radius: 0;
+  }
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 60px;
+  column-gap: 40px;
+  max-width: 530px;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .achievement-grid {
+    max-width: 340px;
+    margin: auto;
+  }
+}
+.achievement-grid::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background: linear-gradient(90deg, rgba(234, 234, 234, 0.13) 0%, rgba(255, 139, 56, 0.67) 48%, rgba(255, 255, 255, 0) 100%);
+  width: 340px;
+  height: 4px;
+}
+.achievement-grid::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, rgba(234, 234, 234, 0.13) 0%, rgba(255, 139, 56, 0.67) 48%, rgba(255, 255, 255, 0) 100%);
+  width: 340px;
+  height: 4px;
+}
+.achievement-grid .achievement-item-style-2 {
+  padding: 30px;
+  z-index: 1;
+  background: #F1F7FF;
+  border-radius: 8px;
+  text-align: center;
+}
+.achievement-grid .achievement-item-style-2:nth-child(2) {
+  background: #FFF9F1;
+}
+.achievement-grid .achievement-item-style-2:nth-child(3) {
+  background: #F4F1FF;
+}
+.achievement-grid .achievement-item-style-2:nth-child(4) {
+  background: #ECFFFF;
 }
 
 /***********************************/
@@ -21728,6 +21788,10 @@ button.accordion-button.collapsed {
 }
 .pricing-plan-item .rateing-title {
   background: #ECF8FE;
+  padding: 20px 23px;
+}
+.pricing-plan-item .rateing-title-style-2 {
+  background: #FFF0E4;
   padding: 20px 23px;
 }
 .pricing-plan-item .pricing-plan-list {
@@ -21897,8 +21961,33 @@ button.accordion-button.collapsed {
   border-radius: 50%;
   background: #D9D9D9;
   opacity: 1;
+  transition: all 0.4s ease;
+}
+.testimonial-pagination .swiper-pagination-bullet:hover {
+  background: var(--bs-primary);
 }
 .testimonial-pagination .swiper-pagination-bullet-active {
+  background: var(--bs-primary);
+}
+
+.testimonial-pagination-2 {
+  position: absolute;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: auto !important;
+}
+.testimonial-pagination-2 .swiper-pagination-bullet {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+.testimonial-pagination-2 .swiper-pagination-bullet:hover {
+  background: var(--bs-primary);
+}
+.testimonial-pagination-2 .swiper-pagination-bullet-active {
   background: var(--bs-primary);
 }
 
@@ -22024,21 +22113,91 @@ button.accordion-button.collapsed {
 }
 
 /************************************/
+/******** Accordion CSS Start ******/
+/**********************************/
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: 0;
+}
+.accordion .accordion-item {
+  border-radius: 8px;
+}
+.accordion .accordion-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.accordion .accordion-body {
+  padding: 0px 30px 20px 30px;
+  background: var(--bs-white);
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion-button::after {
+  content: "+";
+  font-family: "Font Awesome 6 Pro";
+  color: var(--bs-primary);
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "\f068";
+  font-family: "Font Awesome 6 Pro";
+  background-image: none;
+  transform: inherit;
+}
+
+.accordion-button {
+  border-radius: 8px 8px 8px 8px;
+  padding: 20px 30px 20px 30px;
+  color: var(-bs-accordion-btn-color);
+  font-family: var(--font-family-inter);
+  font-size: clamp(1rem, 0.7857rem + 0.7143vw, 1.375rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.accordion-item:first-of-type > .accordion-header .accordion-button {
+  border-radius: 8px 8px 0 0;
+}
+
+.accordion-item:first-of-type > .accordion-header .accordion-button.collapsed {
+  border-radius: 8px 8px 8px 8px;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 8px 8px 0px 0px;
+}
+
+button.accordion-button.collapsed {
+  border-radius: 8px 8px 8px 8px;
+}
+
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+  border-radius: 8px 8px 8px 8px;
+}
+
+.accordion-style-2 .accordion-item {
+  border-radius: 8px;
+  border: 1px solid var(--bs-border);
+}
+
+/**********************************/
+/******** Accordion CSS End ******/
+/********************************/
+/************************************/
 /******** BLOG POST CSS START ******/
 /**********************************/
-.single-blog-post-image {
+.post-card .post-card-image {
   height: 271px;
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
 }
-.single-blog-post-image img {
+.post-card .post-card-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
-.single-blog-post-body {
+.post-card .post-card-body {
   background: var(--bs-white);
   padding: 24px 24px 24px 24px;
   margin-left: 40px;
@@ -22047,23 +22206,23 @@ button.accordion-button.collapsed {
   position: relative;
   top: -44px;
 }
-.single-blog-post-body .meta {
+.post-card .post-card-body .meta {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-bottom: 10px;
 }
-.single-blog-post-body .meta a {
+.post-card .post-card-body .meta a {
   text-decoration: none;
   color: var(--bs-primary);
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.single-blog-post-body .post-title {
-  color: var(--bs-post-title);
+.post-card .post-card-body .card-title {
+  color: var(--bs-card-title);
   overflow: hidden;
-  background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-post-title) 50%);
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22071,20 +22230,20 @@ button.accordion-button.collapsed {
   background-position: 100%;
   transition: background-position 700ms ease;
 }
-.single-blog-post-body .post-title a {
+.post-card .post-card-body .card-title a {
   text-decoration: none;
 }
-.single-blog-post-body .post-title:hover {
+.post-card .post-card-body .card-title:hover {
   background-position: 0 100%;
 }
 
 /* Shine */
-.single-blog-post-image {
+.image-hover-effect {
   position: relative;
   transition: all 0.4s ease;
 }
 
-.single-blog-post-image::before {
+.image-hover-effect::before {
   position: absolute;
   top: 0;
   left: -75%;
@@ -22099,7 +22258,7 @@ button.accordion-button.collapsed {
   transform: skewX(-25deg);
 }
 
-.single-blog-post-image:hover::before {
+.image-hover-effect:hover::before {
   -webkit-animation: shine 1.2s;
   animation: shine 1.2s;
 }
@@ -22114,6 +22273,72 @@ button.accordion-button.collapsed {
     left: 125%;
   }
 }
+.post-card-style-2 {
+  display: flex;
+  align-items: center;
+  background: #F6F3FF;
+  border-radius: 12px;
+}
+@media (max-width: 991.98px) {
+  .post-card-style-2 {
+    flex-direction: column;
+  }
+}
+.post-card-style-2 .post-card-image {
+  height: 222px;
+  width: 270px;
+  min-width: 270px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+@media (max-width: 991.98px) {
+  .post-card-style-2 .post-card-image {
+    width: 100%;
+  }
+}
+.post-card-style-2 .post-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.post-card-style-2 .post-card-body {
+  padding: 20px 30px 20px 30px;
+}
+.post-card-style-2 .post-card-body .meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.post-card-style-2 .post-card-body .meta a {
+  text-decoration: none;
+  color: var(--bs-primary);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.post-card-style-2 .post-card-body .card-title {
+  color: var(--bs-card-title);
+  overflow: hidden;
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 700ms ease;
+}
+.post-card-style-2 .post-card-body .card-title a {
+  text-decoration: none;
+}
+.post-card-style-2 .post-card-body .card-title:hover {
+  background-position: 0 100%;
+}
+
+.post-card-style-2.bg-2 {
+  background: #F3FEFF;
+}
+
 /**********************************/
 /******** BLOG POST CSS END ******/
 /********************************/

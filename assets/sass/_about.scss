@@ -20,10 +20,11 @@
         width: 65px;
         height: 65px;
         border-radius: 8px;
-        background: var(--bs-primary);
+        
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         @include media-breakpoint-down(md){
             width: 50px;
             height: 50px;
@@ -34,66 +35,156 @@
     }
 }
 
-.section-achievement{
-    background: url(../images/about/acrivment.png) no-repeat scroll center center / cover;
+.customers-iamges{
+    display: flex;
+    img{
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        margin-left: -10px;
+    }
+}
 
-    .achievement-item-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        row-gap: 30px;
-        column-gap: 124px;
-        @include media-breakpoint-down(xxl) { 
-            gap: 20px;
-        }
-        @include media-breakpoint-down(xl) { 
-            gap: 30px;
-            justify-content: center;
-        }
-        .achievement-item{
-            padding: 6px 30px 20px 42px;
-            position: relative;
-            z-index: 1;
-            &::after{
-                position: absolute;
-                content: "";
-                right: -102px;
-                top: 50%;
-                background: url(../images/service/vactor-arrow.png) no-repeat scroll center center;
-                background-size: contain;
-                width: 82px;
-                height: 15px;
-                transform: translateY(-50%);
-                @include media-breakpoint-down(xxl) { 
-                    right: -60px;
-                    width: 50px;
-                }
-                @include media-breakpoint-down(xl) { 
-                   display: none;
-                }
+
+// section achievement Start
+.achievement-item-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 124px;
+    @include media-breakpoint-down(xxl) { 
+        gap: 20px;
+    }
+    @include media-breakpoint-down(xl) { 
+        gap: 30px;
+        justify-content: center;
+    }
+    .achievement-item{
+        padding: 6px 30px 20px 42px;
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: "";
+            right: -102px;
+            top: 50%;
+            background: url(../images/service/vactor-arrow.png) no-repeat scroll center center;
+            background-size: contain;
+            width: 82px;
+            height: 15px;
+            transform: translateY(-50%);
+            @include media-breakpoint-down(xxl) { 
+                right: -60px;
+                width: 50px;
             }
-            &:last-child::after {
+            @include media-breakpoint-down(xl) { 
                 display: none;
             }
-            .achievement-icon {
-                height: 46px;
-                width: 46px;
-                img{
-                    border-radius: 6px;
-                }
+        }
+        &:last-child::after {
+            display: none;
+        }
+        .achievement-icon {
+            height: 46px;
+            width: 46px;
+            img{
+                border-radius: 6px;
             }
-            .achievement-body{
-                padding-top: 30px;
-            }
-            svg{
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                left: 0;
-                top: 0;
-                z-index: -1;
-            
-            }
+        }
+        .achievement-body{
+            padding-top: 30px;
+        }
+        svg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
         }
     }
 }
+
+.achievement-bg{
+    background: url(../images/about/acrivment.png) no-repeat scroll center center / cover;
+}
+.acrivment-heading{
+    max-width: 550px;
+}
+.acrivment-image{
+    width: 100%;
+    height: 525px;
+    border-radius: 0 25px 25px 0;
+    overflow: hidden;
+    @include media-breakpoint-down(lg){
+        height: 300px;
+        border-radius: 0;
+    }
+    @include media-breakpoint-down(md){
+        height: 230px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 25px 25px 0;
+        @include media-breakpoint-down(lg){
+            border-radius: 0;
+        }
+    }
+}
+.achievement-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 60px;
+    column-gap: 40px;
+    max-width: 530px;
+    position: relative;
+    @include media-breakpoint-down(md){
+        max-width: 340px;
+        margin: auto;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        background: linear-gradient(90deg, rgba(234, 234, 234, 0.13) 0%, rgba(255, 139, 56, 0.67) 48%, rgba(255, 255, 255, 0) 100%);
+        width: 340px;
+        height: 4px;
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(90deg, rgba(234, 234, 234, 0.13) 0%, rgba(255, 139, 56, 0.67) 48%, rgba(255, 255, 255, 0.00) 100%);
+        width: 340px;
+        height: 4px;
+    }
+    .achievement-item-style-2{
+        padding: 30px;
+        z-index: 1;
+        background: #F1F7FF;
+        border-radius: 8px;
+        text-align: center;
+        &:nth-child(2){
+            background: #FFF9F1;
+        }
+        &:nth-child(3){
+            background: #F4F1FF;
+        }
+        &:nth-child(4){
+            background: #ECFFFF;
+        }
+    }
+   
+}
+
+
+// section achievement End
+
+
