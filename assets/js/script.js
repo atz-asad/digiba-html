@@ -89,28 +89,6 @@
     /  01. Mobile menu Start
     /--------------------------------------------------------*/
 
-    // menu-toggler
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var menuIcon = document.querySelector('.menu-toggler');
-    //     var offcanvas = document.getElementById('mobilemenu-offcanvas');
-
-    //     // Add event listener for when the offcanvas is shown
-    //     offcanvas.addEventListener('shown.bs.offcanvas', function() {
-    //         menuIcon.classList.add('active');
-    //     });
-
-    //     // Add event listener for when the offcanvas is hidden
-    //     offcanvas.addEventListener('hidden.bs.offcanvas', function() {
-    //         menuIcon.classList.remove('active');
-    //     });
-
-    //     // Optionally, you can keep the original toggle functionality on menuIcon click
-    //     menuIcon.addEventListener('click', function() {
-    //         this.classList.toggle('active');
-    //     });
-    // });
-
-
     if ($('.mobileMenu').length > 0) {
         function mobileMenu() {
             $('.mobileMenu li').each(function(index, item){
@@ -349,6 +327,35 @@
     $(document).ready(function() {
         $('select').niceSelect();
     });
+
+    new WOW().init();
+
+   
+      // =================  Back-To-Top =============
+    if ($('.progressCounter').length > 0){
+        $(".progressCounter").progressScroll();
+        $(".progressCounter").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+        $(document).ready(function() {
+        var progressElements = $('.progressScroll');
+        $(window).scroll(function() {
+            // Check if the scroll position is greater than or equal to 50px
+            if ($(this).scrollTop() >= 50) {
+                // Add class 'progress-scroll-opacity-1' with smooth fadeIn animation
+                progressElements.addClass('progress-scroll-opacity-1');
+            } else {
+                // Remove class 'progress-scroll-opacity-1' with smooth fadeOut animation
+                progressElements.removeClass('progress-scroll-opacity-1');
+            }
+        });
+        });
+    }
+    // =================  Back-To-Top =============
+		
+		
+	
 
 
 })(jQuery);
