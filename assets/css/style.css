@@ -21163,6 +21163,25 @@ textarea.form-control-lg {
   border-radius: 8px;
 }
 
+.breadcrumb {
+  --bs-breadcrumb-font-size: 1rem;
+  --bs-breadcrumb-divider-color: var(--bs-body-color);
+  --bs-breadcrumb-item-active-color: var(--bs-body-color);
+  list-style: none;
+  font-weight: 500;
+  gap: 5px;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--bs-body-color);
+  content: var(--bs-breadcrumb-divider, "/");
+  margin-right: 5px;
+}
+
 /**************************/
 /******** Buttons CSS ******/
 /**************************/
@@ -21567,6 +21586,18 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   gap: 100px;
+}
+
+.about-image {
+  border-radius: 22px;
+  width: 100%;
+  height: 580px;
+  position: relative;
+}
+.about-image .about-sm-1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .about-item {
