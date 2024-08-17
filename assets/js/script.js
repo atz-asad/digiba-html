@@ -331,7 +331,7 @@
     new WOW().init();
 
    
-      // =================  Back-To-Top =============
+    // =================  Back-To-Top =============
     if ($('.progressCounter').length > 0){
         $(".progressCounter").progressScroll();
         $(".progressCounter").on("click", function () {
