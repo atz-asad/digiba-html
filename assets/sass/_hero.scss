@@ -88,7 +88,45 @@
 }
 
 
+.contact-info ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-
-
-
+.contact-info .icon{
+    background: rgba(var(--bs-primary-rgb),);
+    color: var(--bs-white);
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+.contact-info li{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    &:hover .icon{
+        background: rgba(var(--bs-primary-rgb), 1);
+        box-shadow: rgba(var(--bs-primary-rgb), 0.8) 0px 3px 20px;
+    }
+}
+.contact-info-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--bs-heading-color);
+    a{
+        text-decoration: none;
+        color: var(--bs-heading-color);
+        transition: all 0.4s ease;
+        tr
+        &:hover{
+            color: var(--bs-primary);
+        }
+    }
+}

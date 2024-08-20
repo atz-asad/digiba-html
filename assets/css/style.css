@@ -20730,6 +20730,7 @@ textarea.form-control-lg {
   --bs-body-bg: #F3F4F6;
   --bs-body-bg-rgb: 243, 244, 246;
   --bs-body-color: #686868;
+  --bs-body-color-rgb: 104, 104, 104;
   --bs-heading-color: #080C15;
   --bs-heading-color-rgb: 8, 12, 21;
   --bs-border: #DFDFDF;
@@ -20877,6 +20878,8 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), 0.8);
 }
 
+/* #Progress End
+================================================== */
 /**************************/
 /******** header CSS ******/
 /**************************/
@@ -21221,6 +21224,9 @@ textarea.form-control-lg {
   border-radius: 8px;
 }
 
+/*****************************/
+/******** breadcrumb *********/
+/****************************/
 .breadcrumb {
   --bs-breadcrumb-font-size: 1rem;
   --bs-breadcrumb-divider-color: var(--bs-body-color);
@@ -21238,6 +21244,102 @@ textarea.form-control-lg {
   color: var(--bs-body-color);
   content: var(--bs-breadcrumb-divider, "/");
   margin-right: 5px;
+}
+
+/*****************************/
+/******** Pagination *********/
+/****************************/
+.pagination {
+  --bs-pagination-bg: var(--bs-white);
+  --bs-pagination-color: var(--bs-heading-color);
+  --bs-pagination-active-color: var(--bs-white);
+  --bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-hover-color: var(--bs-white);
+  --bs-pagination-hover-bg: var(--bs-primary);
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.pagination .page-link {
+  transition: 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.pagination .page-link:focus {
+  box-shadow: none;
+}
+
+.widget_categories ul li {
+  border-bottom: 1px solid var(--bs-border);
+  position: relative;
+}
+.widget_categories ul li a {
+  color: var(--bs-heading-color);
+  display: flex;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+.widget_categories ul li a span {
+  color: var(--bs-heading-color);
+  display: inline-block;
+  margin-left: auto;
+}
+.widget_categories ul li a:hover {
+  color: var(--bs-primary);
+}
+.widget_categories ul li a:hover::after {
+  width: 100%;
+}
+.widget_categories ul li a::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bs-primary);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  height: 1px;
+  width: 0;
+}
+
+.tag-cloud {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.tag-cloud a {
+  text-decoration: none;
+  border: 1px solid var(--bs-border);
+  background: var(--bs-white);
+  color: var(--bs-heading-color);
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+.tag-cloud a:hover {
+  border: 1px solid var(--bs-primary);
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.article-tags {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.article-tags a {
+  text-decoration: none;
+  background: rgba(var(--bs-primary-rgb), 0.24);
+  color: var(--bs-primary);
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+.article-tags a:hover {
+  background: var(--bs-primary);
+  color: var(--bs-white);
 }
 
 /**************************/
@@ -21334,12 +21436,13 @@ textarea.form-control-lg {
   align-items: center;
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: var(--bs-primary);
 }
 .socials a:hover {
   background: rgba(var(--bs-primary-rgb), 1);
   color: var(--bs-white);
+  transform: translateY(-5px);
 }
 
 .header-Buttons {
@@ -21395,6 +21498,91 @@ textarea.form-control-lg {
   color: var(--bs-heading-color);
   padding: 0px 12px 0px 6px;
   background-position: right 0 center;
+}
+
+.widget {
+  box-shadow: 0px 0px 29px 0px rgba(102, 102, 102, 0.1);
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.search-group-form {
+  display: flex;
+  position: relative;
+}
+.search-group-form input {
+  background: transparent;
+  width: 100%;
+}
+
+.serch-btn {
+  background: rgba(var(--bs-primary-rgb));
+  color: var(--bs-white);
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  padding: 0;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.serch-btn:hover {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.serch-btn.active {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+/*================================================
+Default CSS
+=================================================*/
+.default-btn {
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgb(0, 174, 255);
+  color: var(--bs-white);
+  transition: all 0.4s ease;
+  border-radius: 5px;
+  opacity: 1;
+  text-decoration: none;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.default-btn span {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 1;
+}
+.default-btn:hover {
+  color: #fff;
+}
+.default-btn:hover span {
+  width: 225%;
+  height: 562.5px;
 }
 
 /*************************/
@@ -21494,6 +21682,50 @@ textarea.form-control-lg {
   max-width: 480px;
 }
 
+.contact-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info .icon {
+  background: rgba(var(--bs-primary-rgb));
+  color: var(--bs-white);
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.contact-info li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.contact-info li:hover .icon {
+  background: rgba(var(--bs-primary-rgb), 1);
+  box-shadow: rgba(var(--bs-primary-rgb), 0.8) 0px 3px 20px;
+}
+
+.contact-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--bs-heading-color);
+}
+.contact-info-content a {
+  text-decoration: none;
+  color: var(--bs-heading-color);
+  transition: all 0.4s ease;
+}
+tr .contact-info-content a:hover {
+  color: var(--bs-primary);
+}
+
 /****************************/
 /******** service CSS ******/
 /**************************/
@@ -21524,6 +21756,7 @@ textarea.form-control-lg {
 }
 .service-item .service-title {
   font-family: var(--font-family-inter);
+  line-height: 1.4;
 }
 .service-item .service-title a {
   text-decoration: none;
@@ -21650,12 +21883,25 @@ textarea.form-control-lg {
   border-radius: 22px;
   width: 100%;
   height: 580px;
-  position: relative;
+  overflow: hidden;
 }
-.about-image .about-sm-1 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+@media (max-width: 991.98px) {
+  .about-image {
+    height: 460px;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-image {
+    height: 380px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about-image {
+    height: 280px;
+  }
+}
+.about-image img {
+  height: 100%;
 }
 
 .about-item {
@@ -21809,9 +22055,15 @@ textarea.form-control-lg {
   max-width: 530px;
   position: relative;
 }
+@media (max-width: 991.98px) {
+  .achievement-grid {
+    max-width: 450px;
+    margin: auto;
+  }
+}
 @media (max-width: 767.98px) {
   .achievement-grid {
-    max-width: 340px;
+    max-width: 450px;
     margin: auto;
   }
 }
@@ -21862,6 +22114,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: all 0.4s ease;
 }
 .pricing-plan-item .pricing-plan-header {
   padding: 40px 24px 20px 24px;
@@ -22322,7 +22575,7 @@ button.accordion-button.collapsed {
 .post-card .post-card-body .card-title a {
   text-decoration: none;
 }
-.post-card .post-card-body .card-title:hover {
+.post-card:hover .card-title {
   background-position: 0 100%;
 }
 
@@ -22420,7 +22673,7 @@ button.accordion-button.collapsed {
 .post-card-style-2 .post-card-body .card-title a {
   text-decoration: none;
 }
-.post-card-style-2 .post-card-body .card-title:hover {
+.post-card-style-2:hover .card-title {
   background-position: 0 100%;
 }
 
@@ -22428,9 +22681,162 @@ button.accordion-button.collapsed {
   background: #F3FEFF;
 }
 
+.post-card-style-3 {
+  background: var(--bs-white);
+  transition: all 0.4s ease;
+}
+.post-card-style-3 .post-card-image {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+.post-card-style-3 .post-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.post-card-style-3 .post-card-body {
+  padding: 24px 24px 24px 24px;
+  z-index: 1;
+  position: relative;
+}
+.post-card-style-3 .post-card-body .meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.post-card-style-3 .post-card-body .meta a {
+  text-decoration: none;
+  color: var(--bs-primary);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.post-card-style-3 .post-card-body .card-title {
+  color: var(--bs-card-title);
+  overflow: hidden;
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 700ms ease;
+}
+.post-card-style-3 .post-card-body .card-title a {
+  text-decoration: none;
+}
+.post-card-style-3 .post-card-body .card-title:hover {
+  background-position: 0 100%;
+}
+.post-card-style-3:hover {
+  box-shadow: 2px 3px 40px rgba(1, 123, 113, 0.07);
+}
+.post-card-style-3:hover .card-title {
+  background-position: 0 100%;
+}
+
 /**********************************/
 /******** BLOG POST CSS END ******/
 /********************************/
+/******** BLOG Details ******/
+.blog-details-title {
+  line-height: 1.4;
+}
+
+.blog-details-desc {
+  line-height: 1.8;
+}
+
+.blockquote {
+  margin-bottom: 1rem;
+  background: var(-bs-body);
+  border: 1px solid var(--bs-border);
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  border-left: 3px solid var(--bs-primary);
+}
+.blockquote .source-title {
+  position: relative;
+  left: 25px;
+  font-weight: 500;
+  color: var(--bs-heading-color);
+}
+.blockquote .source-title::before {
+  position: absolute;
+  content: "";
+  left: -25px;
+  top: 50%;
+  height: 2px;
+  width: 20px;
+  background: var(--bs-primary);
+  transform: translateY(-50%);
+}
+
+.recent-post-card {
+  display: flex;
+  gap: 15px;
+}
+.recent-post-card .thumb {
+  height: 80px;
+  max-width: 80px;
+  overflow: hidden;
+  min-width: 80px;
+  width: 100%;
+}
+.recent-post-card .thumb img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.recent-post-card .card-title {
+  color: var(--bs-card-title);
+  overflow: hidden;
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 700ms ease;
+}
+.recent-post-card .card-title a {
+  text-decoration: none;
+}
+.recent-post-card .card-title:hover {
+  background-position: 0 100%;
+}
+.recent-post-card:hover .card-title {
+  background-position: 0 100%;
+}
+
+.blog-details-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.blog-details-list i {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.widget-schedule li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
 /**************************/
 /******** footer CSS ******/
 /**************************/

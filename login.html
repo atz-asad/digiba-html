@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Digital Banking System">
+    <title>Digiba || Login</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/favicon.png">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet"  href="assets/css/vendor/all.min.css"> 
+    <link rel="stylesheet"  href="assets/css/vendor/fontawesome.min.css"> 
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <!-- wow animate css -->
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <!-- magnific-popup -->
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.min.css">
+    <!-- Odometer -->
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css">
+    <!-- Nice-select -->
+    <link rel="stylesheet" href="assets/css/vendor/nice-select.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="assets/css/header/header.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="assets/css/footer/footer.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet"  href="assets/css/style.css">
+
+</head>
+<body>
+
+    <!-- pages -->
+    <div class="pages">
+
+        <div class="magic-cursor"></div>
+
+        <!--========= Start Header ==========-->
+        <header class="header-section to-be-fixed">
+            <nav class="navbar navbar-expand-lg hover-menu border-bottom bg-body py-10 py-lg-0">
+                <div class="container">
+                    <!-- Logo -->
+                    
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                    <button class="menu-toggler d-block d-lg-none active" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu-offcanvas" aria-controls="mobilemenu-offcanvas">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                   
+                    <div class="collapse navbar-collapse d-lg-block d-none" id="main_nav">
+                        <!-- Header menu -->
+                        <ul class="navbar-nav justify-content-center ms-auto gap-xl-40 gap-30">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Home</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item active" href="index.html">Home One </a></li>
+                                    <li><a class="dropdown-item" href="home-2.html">Home Two </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="service.html">Service</a></li>
+                                    <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Log In</a></li>
+                                    <li><a class="dropdown-item" href="registation.html">Registation</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="404.html">404 page</a></li>
+
+                                    <li><a class="dropdown-item" href="#">Dropdown item 2 &raquo; </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                                                <ul class="submenu dropdown-menu shadow">
+                                                    <li><a class="dropdown-item" href="#">Multi level 1</a>
+                                                        <ul class="submenu dropdown-menu shadow">
+                                                            <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                                                            <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                                            <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <!-- Header Buttons -->
+                        <div class="header-Buttons ms-auto">
+                            <div class="header-btn">
+                                <form>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa-regular fa-globe"></i>
+                                        <select class=" language-select" aria-label="Default select example">
+                                            <option selected>English</option>
+                                            <option value="bangla">Bangla</option>
+                                            <option value="Arabic">Arabic</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <a href="login.html" class="header-btn">
+                                <span class="icon bg-white">
+                                    <i class="fa-light fa-user"></i>
+                                </span>
+                                Login
+                            </a>
+                        </div>
+                    </div> <!-- navbar-collapse.// -->
+                </div> <!-- container.// -->
+            </nav>
+        </header>
+        <!--========= End Header ==========-->
+
+        <!-- Start Mobile-menu -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="mobilemenu-offcanvas">
+            <div class="offcanvas-header align-items-center justify-content-between px-20 pt-20">
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo-2.png" alt="logo"></a>
+                <a class="menu-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-light fa-xmark"></i></a>
+            </div>
+            <div class="offcanvas-body">
+                <nav class="main_nenu">
+                    <ul class="mobileMenu">
+                        <li class="menu-item"><a  href="javascript:void(0)">Home</a>
+                            <ul class="dropdown">
+                                <li><a href="index.html">Home One</a> </li>
+                                <li><a href="home-2.html">Home Two</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Auction</a></li>
+                        
+                        <li class="menu-item"><a href="javascript:void(0)">Pages</a>
+                            <ul class="dropdown">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="service.html">Service</a></li>
+                                <li><a href="login.html">Log In</a></li>
+                                <li><a href="registation.html">Registation</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="404.html">404 page</a></li>
+                                <!-- <li><a href="javascript:void(0)">Author pages</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Author 1</a></li>
+                                        <li><a href="#">Author 2</a></li>
+                                        <li><a href="#">Author 3</a></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-Buttons justify-content-center pt-40 pb-40">
+                    <!-- Header Buttons -->
+                    <div class="header-btn">
+                        <form>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-regular fa-globe"></i>
+                                <select class=" language-select" aria-label="Default select example">
+                                    <option selected>English</option>
+                                    <option value="bangla">Bangla</option>
+                                    <option value="Arabic">Arabic</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <a href="#" class="header-btn">
+                        <span class="icon bg-white">
+                            <i class="fa-light fa-user"></i>
+                        </span>
+                        Login
+                    </a>
+                </div>
+            </div>        
+        </div>
+        <!-- End Mobile-menu -->
+
+        <!-- ========= START BANNER ========= -->
+        <section class="hero-banner py-70" style="background: url(assets/images/hero/hero-banner.png) no-repeat scroll center center / cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="mb-10">Login</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Login</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= END BANNER ========= -->
+
+        <!-- ========= Start login-wrapper ========= -->
+        <div class="login-wrapper pt-lg-120 pt-40 pb-lg-100 pb-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="login-form bg-light p-30 shadow">
+                            <div class="form-heading text-center mb-20">
+                                <h3 class="fw-semibold">Login Here</h3>
+                                <p>Welcome Back, Login To Your Account</p>
+                            </div>
+                            <form>
+
+                                <div class="mb-20">
+                                    <label class="mb-10" for="email">Your email address</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email Address" required>
+                                </div>
+
+                                <div class="mb-20">
+                                    <label class="mb-10" for="password">Your Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Your Password" required>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-30 mb-30">
+                                    <div class="remember-me-wrap">
+                                        <p class="mb-0">
+                                            <input type="checkbox" id="test2">
+                                            <label for="test2">Remember me</label>
+                                        </p>
+                                    </div>
+                                    <div class="lost-your-password-wrap">
+                                        <a href="#" class="lost-your-password text-body">Lost your password?</a>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <!-- Btn -->
+                                    <button type="submit" class="btn btn-primary mb-20 rounded-3">Login Now</button>
+                                </div>
+                                <div class="text-center">
+                                    <span>Don’t have an account? <a class="text-decoration-none" href="registation.html">Create Account</a></span>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========= END login-wrapper ========= -->
+
+        <!-- ========= Start Footer ========= -->
+        <footer class="footer pt-80 pb-50" style="background: url(assets/images/footer/footer-bg.png) no-repeat scroll center center / cover;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="footer-widget mb-30">
+                            <!-- logo -->
+                            <div class="footer-logo mb-20">
+                                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                            </div>
+                            <p class="fw-medium mb-24">Sed ut perspiciatis unde omnis istecioeio natusioe error sit voluptatem accusa ntium abboasr doloremque lauda.</p>
+                            <div class="d-flex gap-14">
+                                <img src="assets/images/app-store.png" alt="app-store">
+                                <img src="assets/images/google-play.png" alt="google-play">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <!-- footer-widget -->
+                        <div class="footer-widget mb-30">
+                            <h5 class="mb-24">Useful Links</h5>
+                            <div class="footer-widget-item">
+                                <ul class="reset-ul">
+                                    <li><a class="mb-2 fw-medium" href="#">Download App</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Registration</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Services</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Privacy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <!-- footer-widget -->
+                        <div class="footer-widget mb-30">
+                            <h5 class="mb-24">Features</h5>
+                            <div class="footer-widget-item">
+                                <ul class="reset-ul">
+                                    <li><a class="mb-2 fw-medium" href="#">Paid Features</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Hiring Process</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Freelancer</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Invoice</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <!-- footer-widget -->
+                        <div class="footer-widget mb-30">
+                            <h5 class="mb-24">explore</h5>
+                            <div class="footer-widget-item">
+                                <ul class="reset-ul">
+                                    <li><a class="mb-2 fw-medium" href="#">About Us</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Our Mission</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">How It Work</a></li>
+                                    <li><a class="mb-2 fw-medium" href="#">Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <!-- footer-widget -->
+                        <div class="footer-widget mb-30">
+                            <h5 class="mb-24">Email Subscribtion</h5>
+                            <div class="footer-subscribe-widget">
+                                <p>An award winning Mobile App for productive peoples</p>
+                                <form>
+                                    <div class="subscribe-group-btn subscribe mb-3">
+                                        <input type="email" name="email" placeholder="Mail Address">
+                                        <button class="subscribe-btn" type="button">SUBSCRIBE</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright pt-20">
+                <!-- footer-copyright -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="socials mb-14">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                            <p class="fw-medium small text-center mb-0">© <span class="dynamic-year"></span> DigiBa - Digital Banking Website . All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========= End Footer ========= -->
+
+
+        <!--Back-to-top ======================-->
+        <div class="progressCounter progressScroll progress-scroll-opacity-0">
+            <div class="progressScroll-border">
+                <div class="progressScroll-circle">
+                <span class="progressScroll-text text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+                    </svg>
+                </span>
+                </div>
+            </div>
+        </div>
+        <!--Back-to-top ======================-->
+
+    </div><!-- End pages -->
+
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script> 
+    <!-- swiper -->
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <!-- magnific-popup -->
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <!-- Countdown -->
+    <script src="assets/js/vendor/appear.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <!-- nice-select -->
+    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <!-- wow -->
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <!-- progressScroll -->
+    <script src="assets/js/vendor/jquery.progressScroll.min.js"></script>
+
+    <!-- Gsap  -->
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/SplitText.min.js"></script>
+    <script src="assets/js/vendor/ScrollSmoother.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendor/TweenMax.min.js"></script>
+    <script src="assets/js/vendor/split-type-0.3.3.min.js"></script>
+
+    <!-- custom -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html> 

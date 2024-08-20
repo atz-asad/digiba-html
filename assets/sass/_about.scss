@@ -11,12 +11,19 @@
     border-radius: 22px;
     width: 100%;
     height: 580px;
-    position: relative;
+    overflow: hidden;
 
-    .about-sm-1{
-        position: absolute;
-        right: 0;
-        bottom: 0;
+    @include media-breakpoint-down(lg){
+        height: 460px;
+    }
+    @include media-breakpoint-down(sm){
+        height: 380px;
+    }
+    @media only screen and (max-width: 480px) {
+        height: 280px;
+    }
+    img{
+        height: 100%;
     }
 }
 .about-item{
@@ -54,7 +61,6 @@
         margin-left: -10px;
     }
 }
-
 
 // section achievement Start
 .achievement-item-wrapper{
@@ -151,8 +157,12 @@
     column-gap: 40px;
     max-width: 530px;
     position: relative;
+    @include media-breakpoint-down(lg){
+        max-width: 450px;
+        margin: auto;
+    }
     @include media-breakpoint-down(md){
-        max-width: 340px;
+        max-width: 450px;
         margin: auto;
     }
     &::after {
@@ -191,10 +201,7 @@
             background: #ECFFFF;
         }
     }
-   
 }
-
-
 // section achievement End
 
 

@@ -130,8 +130,6 @@
         mobileMenu();
     }
 
-
-
     /////////////////////////////////////////////////////
     // // 2. Register GSAP
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -209,8 +207,6 @@
       tl.from(itemSplitted.lines, { duration: 1, delay: 0.5, opacity: 0, rotationX: -80, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
     });
     /////////////////////////////////////////////////////
-
-
 
     /*================ Testimonial-paralax start  =====================*/
     if ($('.testimonial-paralax').length > 0) {
@@ -353,10 +349,7 @@
         });
     }
     // =================  Back-To-Top =============
-		
-		
 	
-
 
 })(jQuery);
 

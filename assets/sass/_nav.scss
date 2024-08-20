@@ -40,8 +40,9 @@
 
 
 
-
-// breadcrumb
+  /*****************************/
+ /******** breadcrumb *********/
+/****************************/
 
 .breadcrumb {
 	--bs-breadcrumb-font-size: 1rem;
@@ -60,4 +61,113 @@
 	color: var(--bs-body-color);
 	content: var(--bs-breadcrumb-divider, "/");
 	margin-right: 5px;
+}
+
+
+  /*****************************/
+ /******** Pagination *********/
+/****************************/
+
+
+.pagination {
+  --bs-pagination-bg: var(--bs-white);
+  --bs-pagination-color: var(--bs-heading-color);
+  --bs-pagination-active-color: var(--bs-white);
+	--bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-hover-color: var(--bs-white);
+	--bs-pagination-hover-bg: var(--bs-primary);
+  transition: all 0.4s ease;
+  font-weight: 500;
+  .page-link{
+    transition: 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+  }
+  .page-link:focus{
+    box-shadow: none;
+  }
+}
+
+
+
+.widget_categories{
+  ul li {
+    border-bottom: 1px solid var(--bs-border);
+    position: relative;
+    a{
+      color: var(--bs-heading-color);
+      display: flex;
+      padding: 10px 0;
+      text-decoration: none;
+      transition: all 300ms ease-in-out;
+      span{
+        color: var(--bs-heading-color);
+        display: inline-block;
+        margin-left: auto;
+      }
+      &:hover{
+        color: var(--bs-primary);
+      }
+      &:hover::after{
+        width: 100%;
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bs-primary);
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        height: 1px;
+        width: 0;
+      }
+    }
+  }
+}
+
+
+.tag-cloud{
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+
+  a{
+    text-decoration: none;
+    border: 1px solid var(--bs-border);
+    background: var(--bs-white);
+    color: var(--bs-heading-color);
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+
+    &:hover{
+      border: 1px solid var(--bs-primary);
+      background: var(--bs-primary);
+      color: var(--bs-white);
+    }
+
+  }
+}
+
+.article-tags{
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+
+  a{
+    text-decoration: none;
+    background: rgba(var(--bs-primary-rgb), 0.24);
+    color: var(--bs-primary);
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    &:hover{
+      background: var(--bs-primary);
+      color: var(--bs-white);
+    }
+
+  }
 }

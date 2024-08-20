@@ -3,7 +3,6 @@
 /**********************************/
 
 .post-card{
-
     .post-card-image{
         height: 271px;
         width: 100%;
@@ -15,7 +14,6 @@
             object-fit: cover;
         }
     }
-    
     .post-card-body{
         background: var(--bs-white);
         padding: 24px 24px 24px 24px;
@@ -50,12 +48,11 @@
             a{
                 text-decoration: none;
             }
-            &:hover{
-                background-position: 0 100%;
-                
-            }
         }
         
+    }
+    &:hover .card-title{
+        background-position: 0 100%;
     }
 }
 /* Shine */
@@ -143,17 +140,176 @@
             a{
                 text-decoration: none;
             }
-            &:hover{
-                background-position: 0 100%;
-                
-            }
         }
+    }
+    &:hover .card-title{
+        background-position: 0 100%;
     }
 }
 .post-card-style-2.bg-2{
     background:  #F3FEFF;
 }
 
+
+
+.post-card-style-3{
+    background: var(--bs-white);
+    transition: all 0.4s ease;
+    .post-card-image{
+        height: 220px;
+        width: 100%;
+        overflow: hidden;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .post-card-body{
+        padding: 24px 24px 24px 24px;
+        z-index: 1;
+        position: relative;
+        .meta{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 10px;
+            a{
+                text-decoration: none;
+                color: var(--bs-primary);
+                display: flex;
+                gap: 5px;
+                align-items: center;
+            }
+        }
+        .card-title{
+            color: var(--bs-card-title);
+            overflow: hidden;
+            background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: background-position 700ms ease;
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                background-position: 0 100%;
+                
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 2px 3px 40px rgba(1, 123, 113, 0.07);
+    }
+    &:hover .card-title{
+        background-position: 0 100%;
+    }
+}
+
 /**********************************/
 /******** BLOG POST CSS END ******/
 /********************************/
+
+/******** BLOG Details ******/
+.blog-details-title{
+    line-height: 1.4;
+}
+.blog-details-desc{
+    line-height: 1.8;
+}
+
+.blockquote {
+	margin-bottom: 1rem;
+	background: var(-bs-body);
+    border: 1px solid var(--bs-border);
+    padding: 10px 10px 10px 20px;
+    border-radius: 5px;
+    border-left: 3px solid var(--bs-primary);
+    .source-title{
+        position: relative;
+        left: 25px;
+        font-weight: 500;
+        color: var(--bs-heading-color);
+        &::before{
+            position: absolute;
+            content: "";
+            left: -25px;
+            top: 50%;
+            height: 2px;
+            width: 20px;
+            background: var(--bs-primary);
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.recent-post-card{
+    display: flex;
+    gap: 15px;
+    .thumb{
+        height: 80px;
+        max-width: 80px;
+        overflow: hidden;
+        min-width: 80px;
+        width: 100%;
+        img{
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+    .card-title{
+        color: var(--bs-card-title);
+        overflow: hidden;
+        background: linear-gradient(to right, var(--bs-primary), var(--bs-primary) 50%, var(--bs-card-title) 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 700ms ease;
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            background-position: 0 100%;
+            
+        }
+    }
+
+    &:hover .card-title{
+        background-position: 0 100%;
+    }
+}
+
+
+.blog-details-list{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    i{
+        background: var(--bs-primary);
+        color: var(--bs-white);
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 25px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+}
+
+.widget-schedule{
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+}
