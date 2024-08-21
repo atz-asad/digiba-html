@@ -171,9 +171,11 @@
         position: relative;
         .meta{
             display: flex;
-            gap: 20px;
             align-items: center;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 10px;
             a{
                 text-decoration: none;
                 color: var(--bs-primary);

@@ -22702,9 +22702,11 @@ button.accordion-button.collapsed {
 }
 .post-card-style-3 .post-card-body .meta {
   display: flex;
-  gap: 20px;
   align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
 }
 .post-card-style-3 .post-card-body .meta a {
   text-decoration: none;
