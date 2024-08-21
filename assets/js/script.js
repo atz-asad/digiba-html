@@ -2,16 +2,6 @@
 (function ($) {
     "use strict";
 
-    /**
-    1. Magic-cursor
-    2. Register GSAP
-    3. Config GSAP
-    4. Tittle Animation
-    5. testimonial-paralax
-    */
-
-
-
     /******************************************
     =========  Magic Cursor ================
     ***************************************** */
@@ -143,7 +133,7 @@
     // /////////////////////////////////////////////////////
 
     /*================ Tittle Animation  =====================*/
-    let splitTitleLines = gsap.utils.toArray(".title-anim");
+    let splitTitleLines = gsap.utils.toArray(".sec-title-anim");
 
     splitTitleLines.forEach(splitTextLine => {
       const tl = gsap.timeline({
@@ -153,37 +143,15 @@
           end: 'bottom 60%',
           scrub: false,
           markers: false,
-          rotationX: 180,
           toggleActions: 'play none none none'
         }
       });
 
-      const itemSplitted = new SplitText(splitTextLine, { type: "words" });
+      const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
       gsap.set(splitTextLine, { perspective: 400 });
-      itemSplitted.split({ type: "words" })
-      tl.from(itemSplitted.words, {  duration: 0.8, opacity: 0, x: 50, stagger: { amount: 0.9 }, });
+      itemSplitted.split({ type: "lines" })
+      tl.from(itemSplitted.lines, { duration: 1, delay: 0.3, opacity: 0, rotationX: -80, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
     });
-    /*================ END  =====================*/
-
-    function textAnimate(sliderElement) {
-        const textsToAnimate = sliderElement.querySelectorAll(".sec-title-anim");
-        textsToAnimate.forEach(textToAnimate => {
-            const animate = new SplitType(textToAnimate, { types: 'words , chars' });
-            gsap.from(animate.chars, {
-                opacity: 0,
-                x: 70,
-                duration: 0.8,
-                stagger: { amount: 0.9 },
-                scrollTrigger: {
-                    trigger: textToAnimate,
-                    start: "top 95%",
-                }
-            });
-        })
-    };
-
-    textAnimate(document);
-
     /////////////////////////////////////////////////////
     // 27. Text Animation
     let splitTextLines = gsap.utils.toArray(".text-anim");
@@ -353,10 +321,7 @@
     if ($('.preloader').length > 0) {
 
         window.onload = function() {
-            // Select the preloader element
             const preloader = document.querySelector('.preloader');
-            
-            // Hide the preloader
             preloader.classList.add('hidden');
         };
     }

@@ -63,7 +63,6 @@
     }
 }
 
-
 /** === service-item style 3 === */
 
 
@@ -141,5 +140,13 @@
     &:hover{
         box-shadow: 0px 40px 80px 0px rgba(71, 71, 71, 0.25);
         border: 1px solid var(--bs-primary);
+    }
+}
+
+.blog-grid-image,
+.article-image,
+.service-details-iamge{
+    img[data-src] {
+        width: 100%; /* Example: make the image take 100% width */
     }
 }

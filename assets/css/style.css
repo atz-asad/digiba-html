@@ -21968,6 +21968,12 @@ tr .contact-info-content a:hover {
   border: 1px solid var(--bs-primary);
 }
 
+.blog-grid-image img[data-src],
+.article-image img[data-src],
+.service-details-iamge img[data-src] {
+  width: 100%; /* Example: make the image take 100% width */
+}
+
 /****************************/
 /******** About CSS ********/
 /**************************/
