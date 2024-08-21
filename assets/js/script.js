@@ -349,8 +349,18 @@
         });
     }
     // =================  Back-To-Top =============
-	
 
+    if ($('.preloader').length > 0) {
+
+        window.onload = function() {
+            // Select the preloader element
+            const preloader = document.querySelector('.preloader');
+            
+            // Hide the preloader
+            preloader.classList.add('hidden');
+        };
+    }
+    
 })(jQuery);
 
 

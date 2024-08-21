@@ -75,7 +75,9 @@
 .shadow-primary{
     box-shadow: 0px 25px 50px 0px rgba(var(--bs-primary-rgb), 0.24);
 }
-
+h4{
+    line-height: 1.4;
+}
 /* Magic cursor css start */
 
 .magic-cursor {
@@ -179,4 +181,98 @@
 /* #Progress End
 ================================================== */
 
+/*====================== */
+/*====== preloader ======*/
+/*====================== */
 
+.preloader.hidden{
+    visibility: hidden; 
+    opacity: 0; 
+    // transition: all 0.3s 1s ease-out;
+}
+
+.preloader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: visible;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.orange-gradient {
+    background: var(--bs-body-bg);
+}
+
+.preloader-grid {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+.preloader .preloader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.preloader-grid .preloader-grid-item {
+    flex: 0 0 33.33%;
+    -ms-flex: 0 1 auto;
+    max-width: 33.33%;
+    width: 33.33%;
+    height: 33.33%;
+    background-color: var(--bs-primary);
+    animation: preloader-delay 1.3s infinite ease-in-out;
+}
+
+.preloader-grid .preloader-grid-item-1 {
+    animation-delay: 0.2s;
+}
+
+.preloader-grid .preloader-grid-item-2 {
+    animation-delay: 0.3s;
+}
+
+.preloader-grid .preloader-grid-item-3 {
+    animation-delay: 0.4s;
+}
+
+.preloader-grid .preloader-grid-item-4 {
+    animation-delay: 0.1s;
+}
+
+.preloader-grid .preloader-grid-item-5 {
+    animation-delay: 0.2s;
+}
+
+.preloader-grid .preloader-grid-item-6 {
+    animation-delay: 0.3s;
+}
+
+.preloader-grid .preloader-grid-item-7 {
+    animation-delay: 0s;
+}
+.preloader-grid .preloader-grid-item-8 {
+    animation-delay: 0.1s;
+}
+
+.preloader-grid .preloader-grid-item-9 {
+    animation-delay: 0.2s;
+}
+
+@keyframes preloader-delay {
+
+    0%, 70%, 100% {
+        transform: scale3D(1, 1, 1);
+    }
+
+    35% {
+        transform: scale3D(0, 0, 1);
+    }
+}
