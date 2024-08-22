@@ -22932,3 +22932,8 @@ button.accordion-button.collapsed {
 .service-details-iamge img[data-src] {
   width: 100%; /* Example: make the image take 100% width */
 }
+
+
+.main_nenu ul .submenu .dropdown-arrow::before {
+  right: 20px;
+}

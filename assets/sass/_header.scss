@@ -259,6 +259,9 @@
   content: "\f068";
   color: var(--bs-primary);
 }
+.main_nenu ul .submenu .dropdown-arrow::before {
+  right: 20px;
+}
 .main_nenu li a {
   font-size: 16px;
   font-weight: 700;
